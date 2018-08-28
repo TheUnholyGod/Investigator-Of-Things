@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Tree\INode.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Tree\ITree.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraEffects.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Dialog\Dialog.cs" />

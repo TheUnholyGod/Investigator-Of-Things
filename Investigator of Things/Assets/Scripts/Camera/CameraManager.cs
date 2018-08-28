@@ -6,12 +6,15 @@ public class CameraManager : Singleton<CameraManager> {
 
     List<Camera> cameraList;
     public Camera mainCamera;
+    public bool cameraTransition;
 
     Dictionary<Camera, Bounds> grid = new Dictionary<Camera, Bounds>();
 
 	// Use this for initialization
 	void Start () {
         cameraList = new List<Camera>(Camera.allCameras);
+
+        cameraTransition = false;
 
         mainCamera = Camera.main;
 
@@ -46,6 +49,7 @@ public class CameraManager : Singleton<CameraManager> {
     {
         if (!grid[mainCamera].Contains(pos))
         {
+            cameraTransition = true;
             mainCamera.gameObject.SetActive(false);
             foreach (Camera camera in cameraList)
             {
