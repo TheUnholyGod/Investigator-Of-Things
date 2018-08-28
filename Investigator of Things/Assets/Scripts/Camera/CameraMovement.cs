@@ -17,8 +17,10 @@ public class CameraMovement : MonoBehaviour {
             Ray target = CameraManager.GetInstance().mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             Physics.Raycast(transform.position, target.direction, out hit);
-            Player.GetInstance().SetTarget(hit.point);
+            if (!hit.point.Equals(Vector3.zero))
+                Player.GetInstance().SetTarget(hit.point);
         }
 
 	}
+
 }
