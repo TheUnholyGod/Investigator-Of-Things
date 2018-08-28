@@ -29,4 +29,9 @@ public class DialogManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void TriggerDialog()
+    {
+
+    }
 }

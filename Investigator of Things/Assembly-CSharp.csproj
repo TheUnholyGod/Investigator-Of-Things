@@ -59,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BackEnd\Singleton\Singleton.cs" />
+    <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
     <Compile Include="Assets\Scripts\Dialog\Dialog.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogManager.cs" />
     <Compile Include="Assets\Scripts\StateManager\StateManager.cs" />
