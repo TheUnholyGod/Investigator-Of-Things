@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Dialog\Dialog.cs" />
+    <Compile Include="Assets\Scripts\Dialog\DialogManager.cs" />
     <Compile Include="Assets\Scripts\StateManager\StateManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
