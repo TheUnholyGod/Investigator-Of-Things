@@ -11,4 +11,11 @@ public class DialogTree : ITree<Dialog> {
     {
         base.m_root = m_current = m_root1;
     }
+
+    public static DialogTree CreateInstance(string _name)
+    {
+        DialogTree ret = CreateInstance<DialogTree>();
+        ret.name = _name;
+        return ret;
+    }
 }

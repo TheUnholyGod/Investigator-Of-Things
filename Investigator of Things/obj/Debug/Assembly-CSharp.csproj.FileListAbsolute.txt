@@ -340,3 +340,5 @@ C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\obj\Debug\Assembly-CSharp.csproj.CopyComplete
+C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.UI.xml
