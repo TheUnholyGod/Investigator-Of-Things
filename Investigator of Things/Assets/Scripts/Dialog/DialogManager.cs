@@ -59,21 +59,25 @@ public class DialogManager : MonoBehaviour {
                 lettercounter++;
                 yield return new WaitForSeconds(m_dialogspeed);
             }
-            while (true)
+            while (m_DialogTree.Current == m_currDialog)
             {
-                if (Input.GetKeyDown(KeyCode.Q))
+                bool changed = false;
+                foreach (int i in m_DialogTree.GetPaths())
                 {
-                    m_textbox.text = "";
-                    lettercounter = 0;
-                    m_DialogTree.MoveDown(0);
-                    m_currDialog = m_DialogTree.Current;
-                    break;
+                    if (Input.GetKeyDown((i + 1).ToString()))
+                    {
+                        lettercounter = 0;
+                        m_textbox.text = "";
+                        m_DialogTree.MoveDown(i);
+                        m_currDialog = m_DialogTree.Current;
+                        changed = true;
+                        break;
+                    }
                 }
-                yield return null;
-
+                if (changed == true)
+                    break;
+                yield return 0;
             }
-            yield return null;
-
         }
     }
 }
