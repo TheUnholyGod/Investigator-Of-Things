@@ -13,4 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogdata: You touch the cube.
   m_allchildren:
+<<<<<<< HEAD
   - {fileID: 11400000, guid: 8fc4c6b47ff7a23409e08e6239392929, type: 2}
+=======
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+>>>>>>> 100ef47b6aaf5f0d1dbd3eca45e71f33f0355aad

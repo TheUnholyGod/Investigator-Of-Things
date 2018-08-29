@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: View Logs
   m_EditorClassIdentifier: 
   m_dialogdata: Cubes can't have logs?!?!?!
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
