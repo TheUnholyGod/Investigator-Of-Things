@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: Use it Part 2
   m_EditorClassIdentifier: 
   m_dialogdata: You feel great!
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000}
