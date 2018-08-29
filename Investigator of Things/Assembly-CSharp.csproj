@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
+    <Compile Include="Assets\Scripts\BackEnd\Delegater\DelegatePointer.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
     <Compile Include="Assets\Scripts\BackEnd\StateManager\StateManager.cs" />
@@ -81,8 +82,8 @@
     <Compile Include="Assets\Scripts\Inventory\LogItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\LogManager.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\UI_LiveOrRecording_Text.cs" />
-    <Compile Include="Assets\VolumeIcon_Change.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_LiveOrRecording_Text.cs" />
+    <Compile Include="Assets\Scripts\UI\VolumeIcon_Change.cs" />
     <None Include="Assets\Shader\HighLight_Shader.shader" />
     <None Include="Assets\Shader\ProjectorAdditiveTint.shader" />
     <Reference Include="UnityEditor.StandardEvents">

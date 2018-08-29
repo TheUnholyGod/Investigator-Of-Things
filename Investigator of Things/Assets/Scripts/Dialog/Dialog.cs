@@ -8,6 +8,9 @@ public class Dialog : ScriptableObject {
     [SerializeField]
     string m_dialog;
 
+    [SerializeField]
+    DelegatePointer m_delegatePointer;
+
     public string DialogText
     {
         get
@@ -19,5 +22,23 @@ public class Dialog : ScriptableObject {
         {
             m_dialog = value;
         }
+    }
+
+    public DelegatePointer DelegatePointer
+    {
+        get
+        {
+            return m_delegatePointer;
+        }
+
+        set
+        {
+            m_delegatePointer = value;
+        }
+    }
+
+    public void Invoke()
+    {
+        m_delegatePointer.Invoke();
     }
 }
