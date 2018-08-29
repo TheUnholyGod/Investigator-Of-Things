@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable, CreateAssetMenu(fileName = "NewDialogTree", menuName ="Dialog/DialogSequence")]
 public class DialogTree : ITree<Dialog> {
     [SerializeField]
-    DialogNode m_root1;
+    public DialogNode m_root1;
 
     private void OnEnable()
     {

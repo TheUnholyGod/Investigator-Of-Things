@@ -134,5 +134,17 @@ public class DialogMakerWindow : EditorWindow {
         DialogTree dt = DialogTree.CreateInstance(Name);
         AssetDatabase.CreateAsset(dt, "Assets/" + Location + Name + ".asset");
         AssetDatabase.SaveAssets();
+        dt.m_root1 = NodeToDialogNode(m_nodes[rootKey]);
+        foreach (KeyValuePair<string,Node> kvp in m_nodes)
+        {
+
+        }
+    }
+
+    DialogNode NodeToDialogNode(Node _node)
+    {
+        DialogNode dn = CreateInstance<DialogNode>();
+        dn.m_dialogdata = _node.data;
+        return dn;
     }
 }

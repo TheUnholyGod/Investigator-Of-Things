@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogNode : INode<Dialog> {
 
     [SerializeField]
-    string m_dialogdata = "";
+    public string m_dialogdata = "";
 
     [SerializeField]
     DialogNode[] m_allchildren;
