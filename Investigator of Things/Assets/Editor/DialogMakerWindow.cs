@@ -9,29 +9,33 @@ public class DialogMakerWindow : EditorWindow {
     {
         public string data;
         public int childs;
+        public int prevchilds;
         public bool dropdown;
         public bool toggle;
         public string key;
-        public int parent;
+        public string name;
+        public int index;
+        public Node parent;
+        public List<Node> children = new List<Node>();
         public Node(string _key)
         {
             key = _key;
             data = "";
+            parent = null;
             childs = 0;
             dropdown = true;
             toggle = true;
+            index = 0;
         }
     }
-    string Location = "";
+    string Location = "Resources/Dialog/";
     string Name = "";
     string rootKey = "0:0:0";
-
-    ITree<Node> m_creationtree;
-
-    Dictionary<string,Node> m_nodes = new Dictionary<string, Node>();
+    Vector2 Scrollpos = Vector2.zero;
+    Node Root = null;
+    DialogNode EndNode;
 
     delegate void Basicfunc();
-   
 
    [MenuItem("Window/Dialog Window")]
     public static void ShowWindow()
@@ -42,12 +46,22 @@ public class DialogMakerWindow : EditorWindow {
 
     private void Init()
     {
-        m_nodes.Add("0:0:0", new Node("0:0:0"));
+        Root = new Node(rootKey);
+        if (EndNode == null)
+        {
+            foreach (string s in AssetDatabase.FindAssets("END"))
+            {
+                string pth = AssetDatabase.GUIDToAssetPath(s);
+                EndNode = AssetDatabase.LoadAssetAtPath<DialogNode>(pth);
+                if (EndNode != null)
+                    break;
+            }
+        }
     }
 
     private void OnGUI()
     {
-        VerticalField(() =>
+        ScrollField(() =>
         {
             //Name Field
             HorizontalField(() =>
@@ -63,24 +77,32 @@ public class DialogMakerWindow : EditorWindow {
                 Location = EditorGUILayout.TextArea(Location, GUILayout.MaxWidth(275));
             });
 
-            EditorGUILayout.Foldout(m_nodes[rootKey].dropdown, new GUIContent("Root"));
-            if (m_nodes[rootKey].dropdown)
+            Root.dropdown = EditorGUILayout.Foldout(Root.dropdown, new GUIContent("Root"));
+            if (Root.dropdown)
             {
                 HorizontalField(() =>
                 {
+                    EditorGUILayout.LabelField("Name", GUILayout.MaxWidth(60));
+                    Root.name = EditorGUILayout.TextArea(Root.name, GUILayout.MaxWidth(275));
+                });
+                HorizontalField(() =>
+                {
                     EditorGUILayout.LabelField("Data", GUILayout.MaxWidth(60));
-                    m_nodes[rootKey].data = EditorGUILayout.TextArea(m_nodes[rootKey].data, GUILayout.MaxWidth(275));
+                    Root.data = EditorGUILayout.TextArea(Root.data, GUILayout.MaxWidth(275));
                 });
                 HorizontalField(() =>
                 {
                     EditorGUILayout.LabelField("Children", GUILayout.MaxWidth(60));
-                    m_nodes[rootKey].childs = EditorGUILayout.IntField(m_nodes[rootKey].childs, GUILayout.MaxWidth(275));
+                    Root.childs = EditorGUILayout.IntField(Root.childs, GUILayout.MaxWidth(275));
+                    if (Root.childs < Root.prevchilds)
+                    {
+                        Root.children.RemoveRange(Root.childs, Root.prevchilds - Root.childs);
+                    }
                 });
-                for(int i = 0;i< m_nodes[rootKey].childs;++i)
+                for(int i = 0;i< Root.childs;++i)
                 {
-                    RecursiveGUI(i, 1, 0);
+                    RecursiveGUI(i, 1, Root);
                 }
-
             }
 
             if(GUILayout.Button("Generate"))
@@ -91,28 +113,44 @@ public class DialogMakerWindow : EditorWindow {
         });
     }
 
-    void RecursiveGUI(int index,int depth,int parent)
+    void RecursiveGUI(int index,int depth,Node parent)
     {
-        string key = +depth + ":" + parent + ":" + index;
-        if(!m_nodes.ContainsKey(key))
+        string key = +depth + ":" + parent.index + ":" + index;
+        if(null == parent.children.Find( i=> i.key == key))
         {
-            m_nodes.Add(key, new Node(key));
+            Node newnode = new Node(key);
+            newnode.index = index;
+            newnode.parent = parent;
+            parent.children.Add(newnode);
+            //m_nodes.Add(key, newnode);
         }
-        m_nodes[key].dropdown = EditorGUILayout.Foldout(m_nodes[key].dropdown, new GUIContent("Child " + key));
-
-        HorizontalField(() =>
+        Node node = parent.children.Find(i => i.key == key);
+        node.dropdown = EditorGUILayout.Foldout(node.dropdown, new GUIContent("Child " + key));
+        if (node.dropdown)
         {
-            EditorGUILayout.LabelField("Data", GUILayout.MaxWidth(60));
-            m_nodes[key].data = EditorGUILayout.TextArea(m_nodes[key].data, GUILayout.MaxWidth(275));
-        });
-        HorizontalField(() =>
-        {
-            EditorGUILayout.LabelField("Children", GUILayout.MaxWidth(60));
-            m_nodes[key].childs = EditorGUILayout.IntField(m_nodes[key].childs, GUILayout.MaxWidth(275));
-        });
-        for (int i = 0; i < m_nodes[key].childs; ++i)
-        {
-            RecursiveGUI(i, ++depth, index);
+            HorizontalField(() =>
+            {
+                EditorGUILayout.LabelField("Name", GUILayout.MaxWidth(60));
+                node.name = EditorGUILayout.TextArea(node.name, GUILayout.MaxWidth(275));
+            });
+            HorizontalField(() =>
+            {
+                EditorGUILayout.LabelField("Data", GUILayout.MaxWidth(60));
+                node.data = EditorGUILayout.TextArea(node.data, GUILayout.MaxWidth(275));
+            });
+            HorizontalField(() =>
+            {
+                EditorGUILayout.LabelField("Children", GUILayout.MaxWidth(60));
+                node.childs = EditorGUILayout.IntField(node.childs, GUILayout.MaxWidth(275));
+                if (node.childs < node.prevchilds)
+                {
+                    node.children.RemoveRange(node.childs, node.prevchilds - node.childs);
+                }
+            });
+            for (int i = 0; i < node.childs; ++i)
+            {
+                RecursiveGUI(i, depth + 1, node);
+            }
         }
     }
 
@@ -121,6 +159,13 @@ public class DialogMakerWindow : EditorWindow {
         EditorGUILayout.BeginVertical();
         _func();
         EditorGUILayout.EndVertical();
+    }
+
+    void ScrollField(Basicfunc _func)
+    {
+        Scrollpos = EditorGUILayout.BeginScrollView(Scrollpos);
+        _func();
+        EditorGUILayout.EndScrollView();
     }
 
     void HorizontalField(Basicfunc _func)
@@ -133,19 +178,34 @@ public class DialogMakerWindow : EditorWindow {
     void CreateTree()
     {
         DialogTree dt = DialogTree.CreateInstance(Name);
+        Dictionary<string, DialogNode> keyValuePairs = new Dictionary<string, DialogNode>();
         AssetDatabase.CreateAsset(dt, "Assets/" + Location + Name + ".asset");
         AssetDatabase.SaveAssets();
-        dt.m_root1 = NodeToDialogNode(m_nodes[rootKey]);
-        foreach (KeyValuePair<string,Node> kvp in m_nodes)
-        {
-
-        }
+        dt.m_root1 = RecursiveCreation(Root);
     }
 
     DialogNode NodeToDialogNode(Node _node)
     {
         DialogNode dn = CreateInstance<DialogNode>();
         dn.m_dialogdata = _node.data;
+        return dn;
+    }
+
+    DialogNode RecursiveCreation(Node _node)
+    {
+        DialogNode dn = NodeToDialogNode(_node);
+        AssetDatabase.CreateAsset(dn, "Assets/" + Location + _node.name + ".asset");
+        AssetDatabase.SaveAssets();
+        if (_node.children.Count == 0)
+            dn.AddChild(EndNode);
+        else
+        {
+            foreach (Node n in _node.children)
+            {
+                dn.AddChild(RecursiveCreation(n));
+            }
+        }
+        dn.ConvertAll();
         return dn;
     }
 }

@@ -11,6 +11,8 @@ public class DialogNode : INode<Dialog> {
     [SerializeField]
     DialogNode[] m_allchildren;
 
+    List<DialogNode> childconverter = new List<DialogNode>();
+
     private void OnEnable()
     {
         m_data = new Dialog();
@@ -22,6 +24,16 @@ public class DialogNode : INode<Dialog> {
             m_children.Add(count, i);
             ++count;
         }
+    }
+
+    public void AddChild(DialogNode _node)
+    {
+        childconverter.Add(_node);
+    }
+
+    public void ConvertAll()
+    {
+        m_allchildren = childconverter.ToArray();
     }
 
 }
