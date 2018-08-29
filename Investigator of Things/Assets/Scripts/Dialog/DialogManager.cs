@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour {
     [SerializeField]
     TMPro.TextMeshProUGUI m_textbox;
 
-    float m_dialogspeed = 0.25f;
+    float m_dialogspeed = 0.025f;
 
     public Dialog Dialog
     {
@@ -25,6 +25,19 @@ public class DialogManager : MonoBehaviour {
         set
         {
             m_currDialog = value;
+        }
+    }
+
+    public DialogTree DialogTree
+    {
+        get
+        {
+            return m_DialogTree;
+        }
+
+        set
+        {
+            m_DialogTree = value;
         }
     }
 
