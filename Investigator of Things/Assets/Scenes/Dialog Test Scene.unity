@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9b3d7c154e7834fb959369ce5053ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DialogTree: {fileID: 11400000, guid: ba2d84e0b187ed04ebfe432c6ea4ec18, type: 2}
+  m_DialogTree: {fileID: 11400000, guid: 6a63fb288fc583146947c6f519d03cd0, type: 2}
   m_currDialog: {fileID: 0}
   m_textbox: {fileID: 1600040528}
 --- !u!4 &1557422545
