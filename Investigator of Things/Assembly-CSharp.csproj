@@ -78,7 +78,8 @@
     <Compile Include="Assets\Scripts\Interactions\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
-    <Compile Include="Assets\Scripts\Inventory\LogList.cs" />
+    <Compile Include="Assets\Scripts\Inventory\LogItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\LogManager.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\UI_LiveOrRecording_Text.cs" />
     <Compile Include="Assets\VolumeIcon_Change.cs" />

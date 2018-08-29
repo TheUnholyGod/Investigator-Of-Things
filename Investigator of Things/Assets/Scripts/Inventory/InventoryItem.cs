@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventoryItem : MonoBehaviour, IPointerDownHandler {
+
+public class InventoryItem : InteractableObject,IPointerClickHandler{
 
     public string itemName;
-    public bool isUI = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,20 +16,20 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler {
 	void Update () {
 		if (Debug.isDebugBuild)
         {
-            if (Input.GetKeyDown(KeyCode.Z) && !isUI)
+            if (Input.GetKeyDown(KeyCode.Z))
                 InventoryManager.GetInstance().AddItem(this);
         }
 	}
     
-    public void RemoveItem()
+    public void Copy(InventoryItem item)
     {
-        Destroy(gameObject);
+        itemName = item.itemName;
+        m_dialogtree = item.m_dialogtree;
+        DialogManager = item.DialogManager;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        if (!isUI)
-            return;
-
+        OnMouseDown();
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour {
     [SerializeField]
-    DialogTree m_dialogtree;
+    protected DialogTree m_dialogtree;
 
     [SerializeField]
-    DialogManager DialogManager;
+    protected DialogManager DialogManager;
 
-    private void OnMouseDown()
+    protected void OnMouseDown()
     {
         DialogManager.DialogTree = m_dialogtree;
         DialogManager.TriggerDialog();

@@ -53,15 +53,19 @@ public class InventoryManager : Singleton<InventoryManager>
             //list.Add(newItem);
 
             obj = Instantiate(Resources.Load<GameObject>("Items/UIItem"));
-            obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
+            obj.transform.SetParent(inventoryTab.transform.GetChild(inventory.Count));
 
             obj.transform.localScale = new Vector3(1, 1, 1);
             obj.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+
+            obj.GetComponent<InventoryItem>().Copy(item);
 
             list.Add(obj.GetComponent<InventoryItem>());
 
             text.text = list.Count.ToString();
             inventory.Add(item.itemName, list);
+
+            Destroy(obj.GetComponent<LogItem>());
         }
         else
         {

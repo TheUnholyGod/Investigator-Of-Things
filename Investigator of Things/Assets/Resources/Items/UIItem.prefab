@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 224134053770961176}
   - component: {fileID: 222342966080944736}
   - component: {fileID: 114884543127694880}
-  - component: {fileID: 114662341444181864}
   - component: {fileID: 114512152014879308}
+  - component: {fileID: 114820078095588302}
   m_Layer: 0
   m_Name: UIItem
   m_TagString: Untagged
@@ -41,9 +41,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabbf2a27e0fdcc4ab885247ae28277d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_dialogtree: {fileID: 0}
+  DialogManager: {fileID: 0}
   itemName: test
-  isUI: 1
---- !u!114 &114662341444181864
+--- !u!114 &114820078095588302
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,11 +52,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1990097199811022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe0ad0d247d77d40b9b5f16278559e3, type: 3}
+  m_Script: {fileID: 11500000, guid: e2f859d1033696841b17d0ee5587a31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_dialogtree: {fileID: 0}
   DialogManager: {fileID: 0}
+  logName: test
 --- !u!114 &114884543127694880
 MonoBehaviour:
   m_ObjectHideFlags: 1
