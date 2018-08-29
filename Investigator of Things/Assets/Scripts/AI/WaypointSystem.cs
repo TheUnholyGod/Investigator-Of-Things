@@ -15,4 +15,25 @@ public class WaypointSystem : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public GameObject GetNextWaypoint(GameObject _curr)
+    {
+        GameObject ret = null;
+        bool getnext = false;
+        foreach(GameObject go in m_waypoints)
+        {
+            if (getnext)
+            {
+                ret = go;
+                break;
+            }
+            if(go == _curr)
+            {
+                getnext = true;
+            }
+        }
+        if (!ret)
+            ret = m_waypoints[0];
+        return ret;
+    }
 }
