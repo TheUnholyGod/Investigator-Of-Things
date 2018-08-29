@@ -6,18 +6,17 @@ using UnityEngine.EventSystems;
 public class InventoryItem : MonoBehaviour, IPointerDownHandler {
 
     public string itemName;
-    public bool isUI;
+    public bool isUI = false;
 
 	// Use this for initialization
 	void Start () {
-        isUI = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Debug.isDebugBuild)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) && !isUI)
                 InventoryManager.GetInstance().AddItem(this);
         }
 	}
@@ -31,7 +30,6 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler {
     {
         if (!isUI)
             return;
-
 
     }
 }

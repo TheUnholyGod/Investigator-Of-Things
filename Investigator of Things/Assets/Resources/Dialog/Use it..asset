@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: Use it.
   m_EditorClassIdentifier: 
   m_dialogdata: You touch the cube.
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 8fc4c6b47ff7a23409e08e6239392929, type: 2}

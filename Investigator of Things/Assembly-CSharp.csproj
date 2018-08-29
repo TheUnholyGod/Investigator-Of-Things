@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\LogList.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\UI_LiveOrRecording_Text.cs" />
+    <Compile Include="Assets\VolumeIcon_Change.cs" />
     <None Include="Assets\Shader\HighLight_Shader.shader" />
     <None Include="Assets\Shader\ProjectorAdditiveTint.shader" />
     <Reference Include="UnityEditor.StandardEvents">

@@ -23,4 +23,9 @@ MonoBehaviour:
     4) Use it
 
     5) View Logs'
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 4a7527d095c6b284ea85410be369ead8, type: 2}
+  - {fileID: 11400000, guid: 337f6867734859c44b45d89e3e0f8df1, type: 2}
+  - {fileID: 11400000, guid: 1a983458bf384554393c5086c8a7d9f3, type: 2}
+  - {fileID: 11400000, guid: ee6bc23e2be4a6a49b1fe0b4f55f4e0c, type: 2}
+  - {fileID: 11400000, guid: 5e8c374e7a21ec4498649cdecfcae1e7, type: 2}

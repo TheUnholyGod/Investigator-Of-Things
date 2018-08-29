@@ -29,14 +29,6 @@ public class CameraEffects : MonoBehaviour {
                 CameraManager.GetInstance().cameraTransition = false; ;
         }
         else
-        {
             image.color = Color.Lerp(image.color, new Color(image.color.r, image.color.g, image.color.b, 0.12f), effectDuration * 0.5f);
-
-            if (image.color.a == 0.12f)
-            {
-                image.enabled = false;
-                effect.enabled = false;
-            }
-        }
 	}
 }

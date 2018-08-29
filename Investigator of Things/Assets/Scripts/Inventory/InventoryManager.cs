@@ -34,23 +34,34 @@ public class InventoryManager : Singleton<InventoryManager>
 
             text.alignment = TextAlignmentOptions.Midline;
 
-            obj = new GameObject();
-            obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
+            //obj = new GameObject();
+            //obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
 
-            obj.transform.localPosition = Vector3.zero;
-            obj.transform.localScale = new Vector3(1, 1, 1);
+            //obj.transform.localPosition = Vector3.zero;
+            //obj.transform.localScale = new Vector3(1, 1, 1);
 
             List<InventoryItem> list = new List<InventoryItem>();
-            list.Add(item);
+
+            //Image img = obj.AddComponent<Image>();
+            //img.sprite = Resources.Load<Sprite>("Icons/" + item.itemName) as Sprite;
+
+            //obj.AddComponent<InteractableObject>();
+            //InventoryItem newItem = obj.AddComponent<InventoryItem>();
+            //newItem.itemName = item.itemName;
+            //newItem.isUI = true;
+
+            //list.Add(newItem);
+
+            obj = Instantiate(Resources.Load<GameObject>("Items/UIItem"));
+            obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
+
+            obj.transform.localScale = new Vector3(1, 1, 1);
+            obj.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+
+            list.Add(obj.GetComponent<InventoryItem>());
+
             text.text = list.Count.ToString();
             inventory.Add(item.itemName, list);
-
-            Image img = obj.AddComponent<Image>();
-            img.sprite = Resources.Load<Sprite>("Icons/" + item.itemName) as Sprite;
-
-            InventoryItem newItem = obj.AddComponent<InventoryItem>();
-            newItem = item;
-            newItem.isUI = true;
         }
         else
         {
@@ -59,9 +70,7 @@ public class InventoryManager : Singleton<InventoryManager>
             {
                 List<string> keys = new List<string>(inventory.Keys);
                 if (item.itemName == keys[i])
-                {
                     inventoryTab.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = inventory[item.itemName].Count.ToString();
-                }
             }
         }
 
