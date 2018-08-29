@@ -517,3 +517,5 @@ C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of T
 C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of Things\obj\Debug\Assembly-CSharp.dll
 C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of Things\obj\Debug\Assembly-CSharp.pdb
 >>>>>>> 14764afc82bf73a3efd61f86da59c649759dc2d8
+C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.UI.xml

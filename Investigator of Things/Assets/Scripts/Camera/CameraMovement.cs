@@ -6,21 +6,24 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         if (Input.GetMouseButtonDown(0))
         {
-            Ray target = CameraManager.GetInstance().mainCamera.ScreenPointToRay(Input.mousePosition);
+            Camera cam = CameraManager.GetInstance().mainCamera;
+            Vector3 viewportPoint  = cam.ScreenToViewportPoint(Input.mousePosition);
+            if (viewportPoint.x < 0 || viewportPoint.y < 0 || viewportPoint.y > 1)
+                return;
+
+            Ray target = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             Physics.Raycast(transform.position, target.direction, out hit);
             if (!hit.point.Equals(Vector3.zero))
                 Player.GetInstance().SetTarget(hit.point);
         }
-
-	}
+    }
 
 }
