@@ -12,6 +12,7 @@ public class DialogMakerWindow : EditorWindow {
         public bool dropdown;
         public bool toggle;
         public string key;
+        public int parent;
         public Node(string _key)
         {
             key = _key;
@@ -25,7 +26,7 @@ public class DialogMakerWindow : EditorWindow {
     string Name = "";
     string rootKey = "0:0:0";
 
-
+    ITree<Node> m_creationtree;
 
     Dictionary<string,Node> m_nodes = new Dictionary<string, Node>();
 
