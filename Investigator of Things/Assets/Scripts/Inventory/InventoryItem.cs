@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventoryItem : MonoBehaviour, IPointerDownHandler {
+
+public class InventoryItem : InteractableObject,IPointerClickHandler{
 
     public string itemName;
-    public bool isUI;
 
 	// Use this for initialization
 	void Start () {
-        isUI = false;
 	}
 	
 	// Update is called once per frame
@@ -22,16 +21,20 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler {
         }
 	}
     
-    public void RemoveItem()
+    public void Copy(InventoryItem item)
     {
-        Destroy(gameObject);
+        itemName = item.itemName;
+        m_dialogtree = item.m_dialogtree;
+        DialogManager = item.DialogManager;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        if (!isUI)
-            return;
+        OnMouseDown();
+    }
 
-
+    public void PickUp()
+    {
+        InventoryManager.GetInstance().AddItem(this);
     }
 }
