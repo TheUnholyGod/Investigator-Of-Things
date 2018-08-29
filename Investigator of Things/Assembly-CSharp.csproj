@@ -59,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\AI.cs" />
+    <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
     <Compile Include="Assets\Scripts\BackEnd\StateManager\StateManager.cs" />

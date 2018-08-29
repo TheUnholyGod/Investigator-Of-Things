@@ -13,6 +13,8 @@ public class DialogManager : MonoBehaviour {
     [SerializeField]
     TMPro.TextMeshProUGUI m_textbox;
 
+    bool hasDialog = false;
+
     float m_dialogspeed = 0.025f;
 
     public Dialog Dialog
@@ -53,6 +55,9 @@ public class DialogManager : MonoBehaviour {
 
     public void TriggerDialog()
     {
+        if (hasDialog)
+            return;
+        hasDialog = true;
         m_textbox.text = "";
         m_DialogTree.MoveToRoot();
         m_currDialog = m_DialogTree.Current;
@@ -92,5 +97,6 @@ public class DialogManager : MonoBehaviour {
                 yield return 0;
             }
         }
+        hasDialog = false;
     }
 }
