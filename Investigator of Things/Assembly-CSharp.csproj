@@ -59,23 +59,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\AI.cs" />
+    <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
+    <Compile Include="Assets\Scripts\BackEnd\StateManager\StateManager.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Tree\INode.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Tree\ITree.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraEffects.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera\Cursor\custom_cursor.cs" />
     <Compile Include="Assets\Scripts\Dialog\Dialog.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogManager.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogNode.cs" />
     <Compile Include="Assets\Scripts\Dialog\DialogTree.cs" />
     <Compile Include="Assets\Scripts\Effects\CameraStaticEffect.cs" />
+    <Compile Include="Assets\Scripts\Interactions\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\LogList.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\StateManager\StateManager.cs" />
+    <None Include="Assets\Shader\HighLight_Shader.shader" />
+    <None Include="Assets\Shader\ProjectorAdditiveTint.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
