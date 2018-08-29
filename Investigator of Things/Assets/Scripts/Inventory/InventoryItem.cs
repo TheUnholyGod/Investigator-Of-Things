@@ -32,4 +32,9 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
     {
         OnMouseDown();
     }
+
+    public void PickUp()
+    {
+        InventoryManager.GetInstance().AddItem(this);
+    }
 }

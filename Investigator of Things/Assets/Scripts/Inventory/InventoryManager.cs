@@ -78,6 +78,6 @@ public class InventoryManager : Singleton<InventoryManager>
             }
         }
 
-        Destroy(item.gameObject);
+        DestroyImmediate(item.gameObject,true);
     }
 }

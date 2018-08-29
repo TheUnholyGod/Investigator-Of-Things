@@ -14,3 +14,4 @@ MonoBehaviour:
   m_dialogdata: It seems to be stuck.
   m_allchildren:
   - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  m_delegatePointer: {fileID: 11400000, guid: 8ab287ad4e11a444d8267bfe37b85e47, type: 2}
