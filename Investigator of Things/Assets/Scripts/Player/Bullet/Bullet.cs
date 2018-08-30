@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-    float lifetime = 5;
+    float lifetime = 2.5f;
     float timer = 0;
     Vector3 m_direction;
     public Vector3 Direction
@@ -36,4 +36,14 @@ public class Bullet : MonoBehaviour {
             Destroy(this.gameObject);
         }
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+
+        Destroy(this.gameObject);
+    }
 }

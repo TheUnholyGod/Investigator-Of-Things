@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AI\AI.cs" />
+    <Compile Include="Assets\Scripts\AI\Damage.cs" />
+    <Compile Include="Assets\Scripts\AI\MeleeAI.cs" />
     <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Delegater\DelegatePointer.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Delegater\RuntimeDelegatePointer.cs" />

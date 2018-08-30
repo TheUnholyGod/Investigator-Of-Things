@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Dataminer : MonoBehaviour {
-
-    float playerspeed = 10.0f;
+    [SerializeField]
+    float m_health = 20;
+    float playerspeed = 20.0f;
     bool cooldown = false;
     float cooldowntimer = 0;
-    float cooldownreset = 0.05f;
+    float cooldownreset = 0.15f;
     [SerializeField]
     GameObject m_camera;
 
@@ -61,6 +62,14 @@ public class Dataminer : MonoBehaviour {
         Bullet b = newb.GetComponent<Bullet>();
 
         b.Direction = Direction;
-        b.Direction.Set(b.Direction.x, 0, b.Direction.z);
+        b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            this.m_health -= collision.gameObject.GetComponent<Damage>().DamageVal;
+        }
     }
 }
