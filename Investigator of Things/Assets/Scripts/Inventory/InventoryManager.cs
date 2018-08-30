@@ -12,7 +12,17 @@ public class InventoryManager : Singleton<InventoryManager>
 	// Use this for initialization
 	void Start() {
         inventory = new Dictionary<string, List<InventoryItem>>();
-	}
+
+        GameObject[] objects = Resources.LoadAll<GameObject>("InventoryItem");
+
+        foreach (GameObject obj in objects)
+        {
+            GameObject go = Instantiate(obj, obj.transform.position, obj.transform.rotation);
+
+            go.GetComponent<InventoryItem>().SetDialogueManager();
+        }
+
+    }
 	
     public void AddItem(InventoryItem item)
     {
@@ -78,6 +88,6 @@ public class InventoryManager : Singleton<InventoryManager>
             }
         }
 
-        DestroyImmediate(item.gameObject,true);
+        item.gameObject.SetActive(false);
     }
 }

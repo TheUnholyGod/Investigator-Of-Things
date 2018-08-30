@@ -14,7 +14,18 @@ MonoBehaviour:
   m_function:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114033557342376430, guid: cd33bb25e142ce44fbba65392bf66ce4,
+      - m_Target: {fileID: 114947001660513940, guid: 932dd29097dd15149b5a288e681ada15,
+          type: 2}
+        m_MethodName: PickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114548810462428798, guid: cfeced4ee0502454eaa6f8aa8be09ad8,
           type: 2}
         m_MethodName: PickUp
         m_Mode: 1

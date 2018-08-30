@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraManager : Singleton<CameraManager> {
 
     List<Camera> cameraList;
     public Camera mainCamera;
     public bool cameraTransition;
+
+    [SerializeField]
+    Text CameraNo;
 
     Dictionary<Camera, Bounds> grid = new Dictionary<Camera, Bounds>();
 
@@ -60,6 +64,7 @@ public class CameraManager : Singleton<CameraManager> {
                 {
                     mainCamera = camera;
                     mainCamera.gameObject.SetActive(true);
+                    CameraNo.text = mainCamera.name.ToUpper();
                     break;
                 }
             }
