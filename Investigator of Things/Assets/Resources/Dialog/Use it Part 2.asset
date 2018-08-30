@@ -14,3 +14,5 @@ MonoBehaviour:
   m_dialogdata: You feel great!
   m_allchildren:
   - {fileID: 11400000}
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  m_delegatePointer: {fileID: 0}
