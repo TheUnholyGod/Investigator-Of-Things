@@ -7,7 +7,7 @@ public class Player : Singleton<Player> {
     Vector3 target;
     Vector3 prevPos;
     CharacterController character;
-    public float speed = 6.0f;
+    public float speed = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -30,10 +30,7 @@ public class Player : Singleton<Player> {
             character.Move(moveDirection);
         }
 
-        if (transform.position.x < 0 || transform.position.x > 500 || transform.position.z < 0 || transform.position.z > 500)
-            transform.position = prevPos;
-
-        CameraManager.GetInstance().CheckIfInView(transform.position);
+        CameraManager.GetInstance().CheckIfInView(gameObject);
     }
 
     public void SetTarget(Vector3 target)

@@ -10,7 +10,7 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
 
 	// Use this for initialization
 	void Start () {
-        m_dialogtree.MoveDown(3);
+        m_dialogtree.MoveDown(2);
         m_dialogtree.Current.DelegatePointer.Function.AddListener(this.PickUp);
 	}
 	
@@ -38,5 +38,11 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
     public void PickUp()
     {
         InventoryManager.GetInstance().AddItem(this);
+    }
+
+    public void SetDialogueManager()
+    {
+        GameObject temp = GameObject.FindGameObjectWithTag("Dialogue");
+        DialogManager = temp.GetComponent<DialogManager>();
     }
 }

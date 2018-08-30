@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        
         if (Input.GetMouseButtonDown(0))
         {
             Camera cam = CameraManager.GetInstance().mainCamera;
@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour {
 
             Ray target = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            Physics.Raycast(transform.position, target.direction, out hit);
+            Physics.Raycast(cam.transform.position, target.direction, out hit);
             if (!hit.point.Equals(Vector3.zero))
                 Player.GetInstance().SetTarget(hit.point);
         }
