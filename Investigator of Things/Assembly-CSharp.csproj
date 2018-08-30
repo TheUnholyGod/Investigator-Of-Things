@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\LogItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\LogManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Bullet\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Player\Dataminer.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\UI\UI_LiveOrRecording_Text.cs" />
     <Compile Include="Assets\Scripts\UI\VolumeIcon_Change.cs" />
