@@ -61,10 +61,10 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\DialogMakerWindow.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity2018.1.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -334,10 +334,10 @@
       <HintPath>C:/Program Files/Unity2018.1.0f2/Editor/Data/PlaybackEngines/Facebook/UnityEditor.Facebook.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Editor">
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+      <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Runtime">
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+      <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/KamkIGCC/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>

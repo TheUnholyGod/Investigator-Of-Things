@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Interactable
-<<<<<<< HEAD
-  - Enemy
-=======
-  - Dialogue
->>>>>>> ba9d72e34572cbf6be3f71549204dce69cbe9f90
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 
