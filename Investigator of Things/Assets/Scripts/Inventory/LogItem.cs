@@ -10,6 +10,8 @@ public class LogItem : InteractableObject, IPointerClickHandler {
     // Use this for initialization
     void Start()
     {
+        m_dialogtree.MoveDown(2);
+        m_dialogtree.Current.DelegatePointer.Function.AddListener(this.PickUp);
     }
 
     // Update is called once per frame
@@ -32,5 +34,16 @@ public class LogItem : InteractableObject, IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
         OnMouseDown();
+    }
+
+    public void PickUp()
+    {
+        LogManager.GetInstance().AddItem(this);
+    }
+
+    public void SetDialogueManager()
+    {
+        GameObject temp = GameObject.FindGameObjectWithTag("Dialogue");
+        DialogManager = temp.GetComponent<DialogManager>();
     }
 }

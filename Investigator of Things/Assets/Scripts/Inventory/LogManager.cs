@@ -12,6 +12,15 @@ public class LogManager : Singleton<LogManager> {
     void Start()
     {
         inventory = new Dictionary<string, List<LogItem>>();
+
+        GameObject[] objects = Resources.LoadAll<GameObject>("LogItem");
+
+        foreach (GameObject obj in objects)
+        {
+            GameObject go = Instantiate(obj, obj.transform.position, obj.transform.rotation);
+
+            go.GetComponent<LogItem>().SetDialogueManager();
+        }
     }
 
     public void AddItem(LogItem item)

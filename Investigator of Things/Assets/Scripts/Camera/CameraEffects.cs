@@ -12,21 +12,16 @@ public class CameraEffects : MonoBehaviour {
     private void Awake()
     {
         image = GetComponent<Image>();
-        image.enabled = false;
-        effect = GetComponent<CameraStaticEffect>();
-        effect.enabled = false;
     }
 
 	// Update is called once per frame
 	void Update () {
 		if (CameraManager.GetInstance().cameraTransition)
         {
-            image.enabled = true;
-            effect.enabled = true;
             image.color = Color.Lerp(image.color, new Color(image.color.r, image.color.g, image.color.b, 0.5f), effectDuration * 0.5f);
 
             if (image.color.a == 0.5f)
-                CameraManager.GetInstance().cameraTransition = false; ;
+                CameraManager.GetInstance().cameraTransition = false;
         }
         else
             image.color = Color.Lerp(image.color, new Color(image.color.r, image.color.g, image.color.b, 0.12f), effectDuration * 0.5f);
