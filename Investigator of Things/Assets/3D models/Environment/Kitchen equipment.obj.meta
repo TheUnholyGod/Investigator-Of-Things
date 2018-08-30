@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: d67247d53c7ff894fa168219cc01b970
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Fridge_Kitchen_props
+    100002: //RootNode
+    100004: Kitchen_props_Cabinet_with_drawers1
+    100006: Kitchen_props_Cabinet_with_drawers1_Cabinet_lower_drawer
+    100008: Kitchen_props_Cabinet_with_drawers1_Cabinet_upper_drawer
+    100010: Kitchen_props_Cabinet_with_drawers2
+    100012: Kitchen_props_Cabinet_with_drawers2_Cabinet_lower_drawer
+    100014: Kitchen_props_Cabinet_with_drawers2_Cabinet_upper_drawer
+    100016: Kitchen_props_Faucet
+    100018: Kitchen_props_Plain_counter_end1
+    100020: Kitchen_props_Plain_counter_end2_sink_variant
+    100022: Kitchen_props_Plain_counter_mid
+    100024: Kitchen_props_Plain_counter_mid1
+    100026: Kitchen_props_Plain_counter_mid2
+    100028: Kitchen_props_Plain_counter_mid3
+    100030: Kitchen_props_Stove_base
+    100032: Kitchen_props_Stove_base_stove_heater
+    100034: Kitchen_props_Stove_base_stove_heater1
+    100036: Kitchen_props_Stove_base_stove_heater2
+    100038: Kitchen_props_Stove_base_stove_heater3
+    400000: Fridge_Kitchen_props
+    400002: //RootNode
+    400004: Kitchen_props_Cabinet_with_drawers1
+    400006: Kitchen_props_Cabinet_with_drawers1_Cabinet_lower_drawer
+    400008: Kitchen_props_Cabinet_with_drawers1_Cabinet_upper_drawer
+    400010: Kitchen_props_Cabinet_with_drawers2
+    400012: Kitchen_props_Cabinet_with_drawers2_Cabinet_lower_drawer
+    400014: Kitchen_props_Cabinet_with_drawers2_Cabinet_upper_drawer
+    400016: Kitchen_props_Faucet
+    400018: Kitchen_props_Plain_counter_end1
+    400020: Kitchen_props_Plain_counter_end2_sink_variant
+    400022: Kitchen_props_Plain_counter_mid
+    400024: Kitchen_props_Plain_counter_mid1
+    400026: Kitchen_props_Plain_counter_mid2
+    400028: Kitchen_props_Plain_counter_mid3
+    400030: Kitchen_props_Stove_base
+    400032: Kitchen_props_Stove_base_stove_heater
+    400034: Kitchen_props_Stove_base_stove_heater1
+    400036: Kitchen_props_Stove_base_stove_heater2
+    400038: Kitchen_props_Stove_base_stove_heater3
+    2100000: Fridge_Kitchen_propsMat
+    2100002: Kitchen_props_Cabinet_with_drawers1Mat
+    2100004: Kitchen_props_Cabinet_with_drawers1_Cabinet_lower_drawerMat
+    2100006: Kitchen_props_Cabinet_with_drawers1_Cabinet_upper_drawerMat
+    2100008: Kitchen_props_Cabinet_with_drawers2Mat
+    2100010: Kitchen_props_Cabinet_with_drawers2_Cabinet_lower_drawerMat
+    2100012: Kitchen_props_Cabinet_with_drawers2_Cabinet_upper_drawerMat
+    2100014: Kitchen_props_FaucetMat
+    2100016: Kitchen_props_Plain_counter_end1Mat
+    2100018: Kitchen_props_Plain_counter_end2_sink_variantMat
+    2100020: Kitchen_props_Plain_counter_midMat
+    2100022: Kitchen_props_Plain_counter_mid1Mat
+    2100024: Kitchen_props_Plain_counter_mid2Mat
+    2100026: Kitchen_props_Plain_counter_mid3Mat
+    2100028: Kitchen_props_Stove_baseMat
+    2100030: Kitchen_props_Stove_base_stove_heaterMat
+    2100032: Kitchen_props_Stove_base_stove_heater1Mat
+    2100034: Kitchen_props_Stove_base_stove_heater2Mat
+    2100036: Kitchen_props_Stove_base_stove_heater3Mat
+    2300000: Fridge_Kitchen_props
+    2300002: Kitchen_props_Cabinet_with_drawers1
+    2300004: Kitchen_props_Cabinet_with_drawers1_Cabinet_lower_drawer
+    2300006: Kitchen_props_Cabinet_with_drawers1_Cabinet_upper_drawer
+    2300008: Kitchen_props_Cabinet_with_drawers2
+    2300010: Kitchen_props_Cabinet_with_drawers2_Cabinet_lower_drawer
+    2300012: Kitchen_props_Cabinet_with_drawers2_Cabinet_upper_drawer
+    2300014: Kitchen_props_Faucet
+    2300016: Kitchen_props_Plain_counter_end1
+    2300018: Kitchen_props_Plain_counter_end2_sink_variant
+    2300020: Kitchen_props_Plain_counter_mid
+    2300022: Kitchen_props_Plain_counter_mid1
+    2300024: Kitchen_props_Plain_counter_mid2
+    2300026: Kitchen_props_Plain_counter_mid3
+    2300028: Kitchen_props_Stove_base
+    2300030: Kitchen_props_Stove_base_stove_heater
+    2300032: Kitchen_props_Stove_base_stove_heater1
+    2300034: Kitchen_props_Stove_base_stove_heater2
+    2300036: Kitchen_props_Stove_base_stove_heater3
+    3300000: Fridge_Kitchen_props
+    3300002: Kitchen_props_Cabinet_with_drawers1
+    3300004: Kitchen_props_Cabinet_with_drawers1_Cabinet_lower_drawer
+    3300006: Kitchen_props_Cabinet_with_drawers1_Cabinet_upper_drawer
+    3300008: Kitchen_props_Cabinet_with_drawers2
+    3300010: Kitchen_props_Cabinet_with_drawers2_Cabinet_lower_drawer
+    3300012: Kitchen_props_Cabinet_with_drawers2_Cabinet_upper_drawer
+    3300014: Kitchen_props_Faucet
+    3300016: Kitchen_props_Plain_counter_end1
+    3300018: Kitchen_props_Plain_counter_end2_sink_variant
+    3300020: Kitchen_props_Plain_counter_mid
+    3300022: Kitchen_props_Plain_counter_mid1
+    3300024: Kitchen_props_Plain_counter_mid2
+    3300026: Kitchen_props_Plain_counter_mid3
+    3300028: Kitchen_props_Stove_base
+    3300030: Kitchen_props_Stove_base_stove_heater
+    3300032: Kitchen_props_Stove_base_stove_heater1
+    3300034: Kitchen_props_Stove_base_stove_heater2
+    3300036: Kitchen_props_Stove_base_stove_heater3
+    4300000: Fridge_Kitchen_props
+    4300002: Kitchen_props_Cabinet_with_drawers1
+    4300004: Kitchen_props_Cabinet_with_drawers1_Cabinet_lower_drawer
+    4300006: Kitchen_props_Cabinet_with_drawers1_Cabinet_upper_drawer
+    4300008: Kitchen_props_Cabinet_with_drawers2
+    4300010: Kitchen_props_Cabinet_with_drawers2_Cabinet_lower_drawer
+    4300012: Kitchen_props_Cabinet_with_drawers2_Cabinet_upper_drawer
+    4300014: Kitchen_props_Faucet
+    4300016: Kitchen_props_Plain_counter_end1
+    4300018: Kitchen_props_Plain_counter_end2_sink_variant
+    4300020: Kitchen_props_Plain_counter_mid
+    4300022: Kitchen_props_Plain_counter_mid1
+    4300024: Kitchen_props_Plain_counter_mid2
+    4300026: Kitchen_props_Plain_counter_mid3
+    4300028: Kitchen_props_Stove_base
+    4300030: Kitchen_props_Stove_base_stove_heater
+    4300032: Kitchen_props_Stove_base_stove_heater1
+    4300034: Kitchen_props_Stove_base_stove_heater2
+    4300036: Kitchen_props_Stove_base_stove_heater3
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
