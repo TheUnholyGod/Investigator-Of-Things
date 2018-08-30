@@ -10,6 +10,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
 
 	// Use this for initialization
 	void Start () {
+        m_dialogtree.MoveDown(3);
+        m_dialogtree.Current.DelegatePointer.Function.AddListener(this.PickUp);
 	}
 	
 	// Update is called once per frame

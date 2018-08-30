@@ -41,4 +41,13 @@ public class Dialog : ScriptableObject {
     {
         m_delegatePointer.Invoke();
     }
+
+    public static Dialog CreateInstance(Dialog _dialog)
+    {
+        Dialog ret = CreateInstance<Dialog>();
+        ret.m_dialog = _dialog.m_dialog;
+        if(_dialog.DelegatePointer != null)
+            ret.m_delegatePointer = DelegatePointer.CreateInstance(_dialog.DelegatePointer);
+        return ret;
+    }
 }

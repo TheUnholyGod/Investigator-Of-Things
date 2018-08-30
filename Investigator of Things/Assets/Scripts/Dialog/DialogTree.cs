@@ -18,4 +18,13 @@ public class DialogTree : ITree<Dialog> {
         ret.name = _name;
         return ret;
     }
+
+    public static DialogTree CreateInstance(DialogTree _tree)
+    {
+        //DialogTree ret = CreateInstance<DialogTree>();
+        //ret.name = _tree.name;
+        //ret.m_root1 = DialogNode.CreateInstance(_tree.m_root1);
+        //return ret;
+        return Instantiate(_tree);
+    }
 }

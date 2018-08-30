@@ -9,6 +9,19 @@ public class DelegatePointer : ScriptableObject {
     [SerializeField]
     UnityEvent m_function;
 
+    public UnityEvent Function
+    {
+        get
+        {
+            return m_function;
+        }
+
+        set
+        {
+            m_function = value;
+        }
+    }
+
     private void Awake()
     {
         
@@ -16,7 +29,14 @@ public class DelegatePointer : ScriptableObject {
 
     public void Invoke()
     {
-        m_function.Invoke();
+        Function.Invoke();
+    }
+
+    public static DelegatePointer CreateInstance(DelegatePointer _pointer)
+    {
+        DelegatePointer ret = CreateInstance<DelegatePointer>();
+        ret.Function = _pointer.Function;
+        return ret;
     }
 
 }

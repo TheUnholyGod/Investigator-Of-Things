@@ -9,6 +9,11 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
     protected DialogManager DialogManager;
 
+    protected void Awake()
+    {
+        m_dialogtree = DialogTree.CreateInstance(m_dialogtree);
+    }
+
     protected void OnMouseDown()
     {
         DialogManager.DialogTree = m_dialogtree;
