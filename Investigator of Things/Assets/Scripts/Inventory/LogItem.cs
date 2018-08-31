@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LogItem : InteractableObject, IPointerClickHandler {
+public class LogItem : InteractableObject, IPointerClickHandler, IDragHandler, IEndDragHandler {
 
     public string logName;
     public bool isItem = true;
@@ -47,5 +47,15 @@ public class LogItem : InteractableObject, IPointerClickHandler {
     {
         GameObject temp = GameObject.FindGameObjectWithTag("Dialogue");
         DialogManager = temp.GetComponent<DialogManager>();
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        transform.localPosition = Vector3.zero;
     }
 }

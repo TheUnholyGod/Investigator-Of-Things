@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class InventoryItem : InteractableObject,IPointerClickHandler{
+public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandler, IEndDragHandler{
 
     public string itemName;
 
@@ -47,5 +47,15 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
     {
         GameObject temp = GameObject.FindGameObjectWithTag("Dialogue");
         DialogManager = temp.GetComponent<DialogManager>();
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        transform.localPosition = Vector3.zero;
     }
 }
