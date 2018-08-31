@@ -58,8 +58,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        InteractionManager.GetInstance().dragged = null;
-
+        InteractionManager.GetInstance().CheckForFunction();
+        
         transform.localPosition = Vector3.zero;
     }
 }

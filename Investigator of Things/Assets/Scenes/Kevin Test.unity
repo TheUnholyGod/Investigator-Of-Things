@@ -600,6 +600,11 @@ Prefab:
       propertyPath: m_Name
       value: Logs_Slot 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224223072491939736, guid: 8b66a6047fac42e46b902cbdc9a76484,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.9999962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
   m_IsPrefabParent: 0
@@ -1850,6 +1855,7 @@ GameObject:
   - component: {fileID: 1710031544}
   - component: {fileID: 1710031545}
   - component: {fileID: 1710031546}
+  - component: {fileID: 1710031547}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1929,6 +1935,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_destroyOnLoad: 0
   inventoryTab: {fileID: 1520450547}
+--- !u!114 &1710031547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710031541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7cbf253d129f941bfd6206050340e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_destroyOnLoad: 0
+  dragged: {fileID: 0}
+  custom_Cursor: {fileID: 1152647636}
 --- !u!1 &1757963893
 GameObject:
   m_ObjectHideFlags: 0
