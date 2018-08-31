@@ -47,6 +47,13 @@ ModelImporter:
     4300008: Droomba_Mechnanical_props_Droomba_left_arm
     4300010: Droomba_Mechnanical_props_Droomba_motor
     4300012: Droomba_Mechnanical_props_Droomba_right_arm
+    6400000: Droomba_camera_Droomba_Mechnanical_props
+    6400002: Droomba_Mechnanical_props_Droomba_blades_1
+    6400004: Droomba_Mechnanical_props_Droomba_blades_2
+    6400006: Droomba_Mechnanical_props_Droomba_frame
+    6400008: Droomba_Mechnanical_props_Droomba_left_arm
+    6400010: Droomba_Mechnanical_props_Droomba_motor
+    6400012: Droomba_Mechnanical_props_Droomba_right_arm
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -80,7 +87,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
