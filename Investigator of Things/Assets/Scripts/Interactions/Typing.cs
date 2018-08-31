@@ -4,13 +4,28 @@ using UnityEngine;
 using System.Text;
 using TMPro;
 
-public class Typing : MonoBehaviour {
+public class Typing : InteractableObject {
 
+    [SerializeField]
     TextMeshPro text;
 
+    [SerializeField]
+    GameObject textMesh;
+
+    Vector3 defaultPos;
+    Quaternion defaultRotation;
+
+    bool enableTyping = false;
+
 	// Use this for initialization
-	void Start () {
-        text = GetComponent<TextMeshPro>();
+	void Start ()
+    {
+        m_dialogtree.MoveDown(1);
+        m_dialogtree.Current.DelegatePointer.Function.AddListener(this.EnableTypingCam);
+        text = textMesh.GetComponent<TextMeshPro>();
+
+        defaultPos = textMesh.transform.position;
+        defaultRotation = text.transform.rotation;
 	}
 
     private void OnGUI()
@@ -33,17 +48,40 @@ public class Typing : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (Input.anyKeyDown)
+        if (enableTyping)
         {
-            foreach (char characters in Input.inputString)
+
+            if (Input.anyKeyDown)
             {
-                if (char.IsDigit(characters))
-                    text.text += characters;
-                else if (char.IsLetter(characters))
-                    text.text += characters;
-                else if (characters == (char)8 && text.text.Length > 0)
-                    text.text = text.text.Remove(text.text.Length - 1);
+                foreach (char characters in Input.inputString)
+                {
+                    if (char.IsDigit(characters))
+                        text.text += characters;
+                    else if (char.IsLetter(characters))
+                        text.text += characters;
+                    else if (characters == (char)8 && text.text.Length > 0)
+                        text.text = text.text.Remove(text.text.Length - 1);
+                    else if ((characters == (char)8 && text.text.Length <= 0) || characters == (char)27)
+                    {
+                        enableTyping = false;
+                        CameraManager.GetInstance().mainCamera.gameObject.SetActive(true);
+                        CameraManager.GetInstance().computerCamera.gameObject.SetActive(false);
+
+                        textMesh.transform.position = defaultPos;
+                        textMesh.transform.rotation = defaultRotation;
+                    }
+                }
             }
         }
+    }
+
+    void EnableTypingCam()
+    {
+        CameraManager.GetInstance().computerCamera.gameObject.SetActive(true);
+        CameraManager.GetInstance().mainCamera.gameObject.SetActive(false);
+        textMesh.transform.position = CameraManager.GetInstance().computerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f,10.0f));
+        textMesh.transform.rotation = Quaternion.identity;
+
+        enableTyping = true;
     }
 }
