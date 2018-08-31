@@ -6,11 +6,12 @@ using UnityEngine.EventSystems;
 public class LogItem : InteractableObject, IPointerClickHandler {
 
     public string logName;
+    public bool isItem = true;
 
     // Use this for initialization
     void Start()
     {
-        m_dialogtree.MoveDown(2);
+        m_dialogtree.MoveDown(1);   
         m_dialogtree.Current.DelegatePointer.Function.AddListener(this.PickUp);
     }
 
@@ -38,7 +39,8 @@ public class LogItem : InteractableObject, IPointerClickHandler {
 
     public void PickUp()
     {
-        LogManager.GetInstance().AddItem(this);
+        if (isItem)
+            LogManager.GetInstance().AddItem(this);
     }
 
     public void SetDialogueManager()

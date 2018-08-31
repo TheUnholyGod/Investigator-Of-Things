@@ -13,7 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogdata: 'What would you like to do?
 
-
     1) Tell me what this is
 
     2) What can I do with this
@@ -23,6 +22,7 @@ MonoBehaviour:
     4) Use it
 
     5) View Logs'
+  m_delegatePointer: {fileID: 0}
   m_allchildren:
   - {fileID: 11400000, guid: 4a7527d095c6b284ea85410be369ead8, type: 2}
   - {fileID: 11400000, guid: 337f6867734859c44b45d89e3e0f8df1, type: 2}

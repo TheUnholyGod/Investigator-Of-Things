@@ -69,6 +69,8 @@ public class InventoryManager : Singleton<InventoryManager>
             obj.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
 
             obj.GetComponent<InventoryItem>().Copy(item);
+            obj.GetComponent<InventoryItem>().enabled = true; ;
+            obj.GetComponent<InventoryItem>().isItem = false;
 
             list.Add(obj.GetComponent<InventoryItem>());
 
@@ -88,6 +90,6 @@ public class InventoryManager : Singleton<InventoryManager>
             }
         }
 
-        item.gameObject.SetActive(false);
+        Destroy(item.gameObject);
     }
 }

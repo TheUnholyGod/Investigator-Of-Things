@@ -10,8 +10,12 @@ public class Typing : InteractableObject {
     TextMeshPro text;
 
     [SerializeField]
-    GameObject textMesh;
+    string password;
 
+    [SerializeField]
+    GameObject textObject;
+
+    Vector3 defaultScale;
     Vector3 defaultPos;
     Quaternion defaultRotation;
 
@@ -22,10 +26,10 @@ public class Typing : InteractableObject {
     {
         m_dialogtree.MoveDown(1);
         m_dialogtree.Current.DelegatePointer.Function.AddListener(this.EnableTypingCam);
-        text = textMesh.GetComponent<TextMeshPro>();
 
-        defaultPos = textMesh.transform.position;
-        defaultRotation = text.transform.rotation;
+        defaultPos = textObject.transform.position;
+        defaultRotation = textObject.transform.rotation;
+        defaultScale = textObject.transform.localScale;
 	}
 
     private void OnGUI()
@@ -50,9 +54,24 @@ public class Typing : InteractableObject {
 
         if (enableTyping)
         {
-
             if (Input.anyKeyDown)
             {
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    enableTyping = false;
+                    CameraManager.GetInstance().mainCamera.gameObject.SetActive(true);
+                    CameraManager.GetInstance().computerCamera.gameObject.SetActive(false);
+
+                    textObject.transform.position = defaultPos;
+                    textObject.transform.rotation = defaultRotation;
+                    textObject.transform.localScale = defaultScale;
+                    return;
+                }
+                else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                {
+                    Debug.Log(password.Equals(text.text));
+                }
+
                 foreach (char characters in Input.inputString)
                 {
                     if (char.IsDigit(characters))
@@ -67,8 +86,9 @@ public class Typing : InteractableObject {
                         CameraManager.GetInstance().mainCamera.gameObject.SetActive(true);
                         CameraManager.GetInstance().computerCamera.gameObject.SetActive(false);
 
-                        textMesh.transform.position = defaultPos;
-                        textMesh.transform.rotation = defaultRotation;
+                        textObject.transform.position = defaultPos;
+                        textObject.transform.rotation = defaultRotation;
+                        textObject.transform.localScale = defaultScale;
                     }
                 }
             }
@@ -79,8 +99,9 @@ public class Typing : InteractableObject {
     {
         CameraManager.GetInstance().computerCamera.gameObject.SetActive(true);
         CameraManager.GetInstance().mainCamera.gameObject.SetActive(false);
-        textMesh.transform.position = CameraManager.GetInstance().computerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f,10.0f));
-        textMesh.transform.rotation = Quaternion.identity;
+        textObject.transform.position = CameraManager.GetInstance().computerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f,10.0f));
+        textObject.transform.rotation = Quaternion.identity;
+        textObject.transform.localScale = new Vector3(1, 1, 1);
 
         enableTyping = true;
     }

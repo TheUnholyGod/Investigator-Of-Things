@@ -36,7 +36,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1990097199811022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cabbf2a27e0fdcc4ab885247ae28277d, type: 3}
   m_Name: 
@@ -44,13 +44,14 @@ MonoBehaviour:
   m_dialogtree: {fileID: 0}
   DialogManager: {fileID: 0}
   itemName: test
+  isItem: 1
 --- !u!114 &114820078095588302
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1990097199811022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2f859d1033696841b17d0ee5587a31f, type: 3}
   m_Name: 
@@ -58,6 +59,7 @@ MonoBehaviour:
   m_dialogtree: {fileID: 0}
   DialogManager: {fileID: 0}
   logName: test
+  isItem: 1
 --- !u!114 &114884543127694880
 MonoBehaviour:
   m_ObjectHideFlags: 1
