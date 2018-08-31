@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />
     <Compile Include="Assets\Scripts\AI\Damage.cs" />
+    <Compile Include="Assets\Scripts\AI\Explosion.cs" />
     <Compile Include="Assets\Scripts\AI\MeleeAI.cs" />
     <Compile Include="Assets\Scripts\AI\RangedAI.cs" />
     <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
