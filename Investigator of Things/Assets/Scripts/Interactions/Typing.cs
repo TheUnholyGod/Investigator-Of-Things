@@ -65,7 +65,7 @@ public class Typing : InteractableObject {
                     {
                         enableTyping = false;
                         CameraManager.GetInstance().mainCamera.gameObject.SetActive(true);
-                        CameraManager.GetInstance().computerCamera.gameObject.SetActive(false);
+                        //CameraManager.GetInstance().computerCamera.gameObject.SetActive(false);
 
                         textMesh.transform.position = defaultPos;
                         textMesh.transform.rotation = defaultRotation;
@@ -77,9 +77,9 @@ public class Typing : InteractableObject {
 
     void EnableTypingCam()
     {
-        CameraManager.GetInstance().computerCamera.gameObject.SetActive(true);
+        //CameraManager.GetInstance().computerCamera.gameObject.SetActive(true);
         CameraManager.GetInstance().mainCamera.gameObject.SetActive(false);
-        textMesh.transform.position = CameraManager.GetInstance().computerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f,10.0f));
+        //textMesh.transform.position = CameraManager.GetInstance().computerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f,10.0f));
         textMesh.transform.rotation = Quaternion.identity;
 
         enableTyping = true;
