@@ -43,6 +43,10 @@ public class Bullet : MonoBehaviour {
         {
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.tag == "Player" && this.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Dataminer>().TakeDamage(1);
+        }
 
         Destroy(this.gameObject);
     }

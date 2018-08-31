@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour {
 
+    [SerializeField]
     int m_DamageVal = 1;
 
     public int DamageVal

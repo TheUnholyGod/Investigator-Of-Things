@@ -65,11 +65,25 @@ public class Dataminer : MonoBehaviour {
         b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.tag == "Enemy")
+    //    {
+    //        this.m_health -= collision.gameObject.GetComponent<Damage>().DamageVal;
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
-            this.m_health -= collision.gameObject.GetComponent<Damage>().DamageVal;
+            TakeDamage(other.gameObject.GetComponent<Damage>().DamageVal);
+            other.enabled = false;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        this.m_health -= damage;
     }
 }
