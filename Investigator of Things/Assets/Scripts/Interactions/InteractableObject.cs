@@ -11,7 +11,8 @@ public class InteractableObject : MonoBehaviour {
 
     protected void Awake()
     {
-        m_dialogtree = DialogTree.CreateInstance(m_dialogtree);
+        if (m_dialogtree != null)
+            m_dialogtree = DialogTree.CreateInstance(m_dialogtree);
     }
 
     protected void OnMouseDown()
