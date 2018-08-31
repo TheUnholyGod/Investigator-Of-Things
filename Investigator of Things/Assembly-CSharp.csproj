@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\AI\Explosion.cs" />
     <Compile Include="Assets\Scripts\AI\InteractableGameObject.cs" />
     <Compile Include="Assets\Scripts\AI\MeleeAI.cs" />
+    <Compile Include="Assets\Scripts\AI\MineArea.cs" />
     <Compile Include="Assets\Scripts\AI\RangedAI.cs" />
     <Compile Include="Assets\Scripts\AI\Transporter.cs" />
     <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />

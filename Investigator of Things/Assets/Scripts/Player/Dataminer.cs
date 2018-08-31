@@ -13,6 +13,11 @@ public class Dataminer : MonoBehaviour {
     GameObject m_camera;
     [SerializeField]
     GameObject m_bullet;
+    [SerializeField]
+    public Transporter transporter;
+
+    public bool intransport = false;
+    public bool istransportmoving = false;
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +42,7 @@ public class Dataminer : MonoBehaviour {
             cooldowntimer += Time.deltaTime;
         }
         m_camera.transform.position = new Vector3(transform.position.x, m_camera.transform.position.y, transform.position.z);
+
     }
 
     public void Movement()
@@ -65,7 +71,16 @@ public class Dataminer : MonoBehaviour {
     {
         Vector3 worldpos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(m_camera.transform.position.y - transform.position.y)));
         transform.LookAt(new Vector3(worldpos.x, transform.position.y, worldpos.z));
-        Movement();
+        if(!intransport)
+            Movement();
+        else if(intransport && !istransportmoving)
+        {
+            if(Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.D))
+            {
+                transporter.m_stateManager.Currstate = InteractableGameObject.State.AWAIT_INTERACT;
+                intransport = false;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

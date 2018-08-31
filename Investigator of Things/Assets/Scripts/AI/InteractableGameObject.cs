@@ -13,19 +13,27 @@ public class InteractableGameObject : MonoBehaviour {
     }
 
     [SerializeField]
-    GameObject m_player;
+    protected GameObject m_player;
 
-    StateManager<State> m_stateManager;
+    public StateManager<State> m_stateManager;
 
     void Awake()
     {
         m_stateManager = new StateManager<State>();
         m_stateManager.Currstate = State.IDLE;
+        m_stateManager.CurrstateReqUpdate = true;
         m_stateManager.AddUpdateFunction(State.IDLE, Idle);
         m_stateManager.AddUpdateFunction(State.AWAIT_INTERACT, AwaitInteract);
         m_stateManager.AddUpdateFunction(State.INTERACT, Interact);
         m_stateManager.AddUpdateFunction(State.ACTIVATE, Activate);
+        m_stateManager.AddFunction(new StateDoubleKey<State>(State.IDLE, State.AWAIT_INTERACT).GetHashCode(), IdleToAwaitInteraction);
+        m_stateManager.AddFunction(new StateDoubleKey<State>(State.AWAIT_INTERACT, State.IDLE).GetHashCode(), AwaitInteractionToIdle);
+        m_stateManager.AddFunction(new StateDoubleKey<State>(State.AWAIT_INTERACT, State.INTERACT).GetHashCode(), AwaitInteractionToInteraction);
+        m_stateManager.AddFunction(new StateDoubleKey<State>(State.INTERACT, State.AWAIT_INTERACT).GetHashCode(), InteractionToAwaitInteraction);
+        m_stateManager.AddFunction(new StateDoubleKey<State>(State.INTERACT, State.ACTIVATE).GetHashCode(), InteractionToActivate);
+        m_stateManager.AddFunction(new StateDoubleKey<State>(State.ACTIVATE, State.INTERACT).GetHashCode(), ActivateToInteraction);
 
+        m_player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Use this for initialization
@@ -35,7 +43,7 @@ public class InteractableGameObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        m_stateManager.Update();
 	}
 
     public virtual void Idle()
