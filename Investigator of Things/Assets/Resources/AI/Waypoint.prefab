@@ -618,7 +618,7 @@ MonoBehaviour:
   - {fileID: 1994455573157982}
   - {fileID: 1790668705354500}
   - {fileID: 1439872695389122}
-  m_spawn: {fileID: 0}
+  m_spawn: {fileID: 1409083324061278, guid: 249bf6660b8b6fc47905ceb5efc5cbc8, type: 2}
   m_spawnno: 1
   m_maxspawnno: 200
 --- !u!135 &135289583865422620

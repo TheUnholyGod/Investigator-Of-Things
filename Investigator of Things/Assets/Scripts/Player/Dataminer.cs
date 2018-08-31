@@ -11,7 +11,6 @@ public class Dataminer : MonoBehaviour {
     float cooldownreset = 0.15f;
     [SerializeField]
     GameObject m_camera;
-
     [SerializeField]
     GameObject m_bullet;
 
@@ -22,10 +21,7 @@ public class Dataminer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        Vector3 worldpos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(m_camera.transform.position.y - transform.position.y)));
-        transform.LookAt(new Vector3(worldpos.x, transform.position.y, worldpos.z));
-        Movement();  
+        UpdateRotation();
         if(Input.GetMouseButton(0) && !cooldown)
         {
             Shoot();
@@ -65,13 +61,12 @@ public class Dataminer : MonoBehaviour {
         b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "Enemy")
-    //    {
-    //        this.m_health -= collision.gameObject.GetComponent<Damage>().DamageVal;
-    //    }
-    //}
+    public void UpdateRotation()
+    {
+        Vector3 worldpos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(m_camera.transform.position.y - transform.position.y)));
+        transform.LookAt(new Vector3(worldpos.x, transform.position.y, worldpos.z));
+        Movement();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

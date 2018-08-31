@@ -63,8 +63,10 @@
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />
     <Compile Include="Assets\Scripts\AI\Damage.cs" />
     <Compile Include="Assets\Scripts\AI\Explosion.cs" />
+    <Compile Include="Assets\Scripts\AI\InteractableGameObject.cs" />
     <Compile Include="Assets\Scripts\AI\MeleeAI.cs" />
     <Compile Include="Assets\Scripts\AI\RangedAI.cs" />
+    <Compile Include="Assets\Scripts\AI\Transporter.cs" />
     <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Delegater\DelegatePointer.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Delegater\RuntimeDelegatePointer.cs" />
