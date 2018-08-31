@@ -600,11 +600,14 @@ Prefab:
       propertyPath: m_Name
       value: Logs_Slot 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 224223072491939736, guid: 8b66a6047fac42e46b902cbdc9a76484,
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -1.9999962
       objectReference: {fileID: 0}
+=======
+>>>>>>> edccaebcc1fecd9daeb5d0eac89ba9847e630731
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
   m_IsPrefabParent: 0
