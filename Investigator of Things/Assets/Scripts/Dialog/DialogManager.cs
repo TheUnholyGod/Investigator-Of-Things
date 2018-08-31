@@ -72,7 +72,7 @@ public class DialogManager : MonoBehaviour {
         while (m_currDialog.DialogText != "END")
         {
             if (m_currDialog.DelegatePointer != null)
-                m_currDialog.Invoke();
+                m_currDialog.Invoke();  
             while(lettercounter < m_currDialog.DialogText.Length)
             {
                 m_textbox.text += m_currDialog.DialogText[lettercounter];

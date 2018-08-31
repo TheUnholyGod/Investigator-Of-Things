@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f859d1033696841b17d0ee5587a31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_dialogtree: {fileID: 11400000, guid: 6a63fb288fc583146947c6f519d03cd0, type: 2}
+  m_dialogtree: {fileID: 11400000, guid: d6680a828788c5b4a889b1d5f4a6d8cd, type: 2}
   DialogManager: {fileID: 114397110984068080, guid: b5a50f95de6ea59429a420d4851f4b29,
     type: 2}
   logName: test

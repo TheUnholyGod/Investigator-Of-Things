@@ -8,6 +8,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
 
     public string itemName;
 
+    public bool isItem = true;
+
 	// Use this for initialization
 	void Start () {
         m_dialogtree.MoveDown(2);
@@ -37,7 +39,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler{
 
     public void PickUp()
     {
-        InventoryManager.GetInstance().AddItem(this);
+        if (isItem)
+            InventoryManager.GetInstance().AddItem(this);
     }
 
     public void SetDialogueManager()

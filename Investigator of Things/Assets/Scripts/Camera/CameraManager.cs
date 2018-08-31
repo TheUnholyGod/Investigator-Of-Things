@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class CameraManager : Singleton<CameraManager>
 {
-    List<Camera> cameraList;
+    List<Camera> perspectiveCameraList;
     public Camera mainCamera;
+    public Camera computerCamera;
     public bool cameraTransition;
 
     [SerializeField]
@@ -15,22 +16,29 @@ public class CameraManager : Singleton<CameraManager>
     // Use this for initialization
     void Start()
     {
-        cameraList = new List<Camera>(Camera.allCameras);
+        perspectiveCameraList = new List<Camera>(Camera.allCameras);
 
         cameraTransition = false;
 
-        mainCamera = Camera.main;
-
-        for (int i = 0; i < cameraList.Count; ++i)
+        for (int i = 0; i < perspectiveCameraList.Count; ++i)
         {
-            if (mainCamera != cameraList[i])
-                cameraList[i].gameObject.SetActive(false);
+            if (perspectiveCameraList[i].orthographic)
+                computerCamera = perspectiveCameraList[i];
+            else if (mainCamera == null)
+                mainCamera = perspectiveCameraList[i];
+
+            if (mainCamera != perspectiveCameraList[i])
+                perspectiveCameraList[i].gameObject.SetActive(false);
         }
 
+        perspectiveCameraList.Remove(computerCamera);
     }
 
     public void CheckIfInView(GameObject player)
     {
+        if (computerCamera.gameObject.activeSelf)
+            return;
+
         RaycastHit hit;
 
         Vector3 direction = (-mainCamera.transform.position - player.transform.position).normalized;
@@ -38,7 +46,7 @@ public class CameraManager : Singleton<CameraManager>
         float distance = float.MaxValue;
         Camera closestCam = mainCamera;
 
-        foreach (Camera cam in cameraList)
+        foreach (Camera cam in perspectiveCameraList)
         {
             direction = player.transform.position - cam.transform.position;
 

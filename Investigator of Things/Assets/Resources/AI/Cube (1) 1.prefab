@@ -109,5 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
+  defaultmat: {fileID: 2100000, guid: d79b27e8642cf8c4b944cfb7cb20d4c8, type: 2}
+  activatedmat: {fileID: 2100000, guid: 0c346dd2c21f4c846a44df9829f38be1, type: 2}
   nextWaypoint: {fileID: 0}
   m_waypointSystem: {fileID: 0}

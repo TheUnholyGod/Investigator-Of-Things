@@ -42,6 +42,7 @@ public class InteractableGameObject : MonoBehaviour {
         m_player = GameObject.FindGameObjectWithTag("Player");
         GetComponent<MeshRenderer>().material = defaultmat;
 
+
     }
 
     // Use this for initialization

@@ -68,6 +68,8 @@ public class LogManager : Singleton<LogManager> {
             obj.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
 
             obj.GetComponent<LogItem>().Copy(item);
+            obj.GetComponent<LogItem>().enabled = true; ;
+            obj.GetComponent<LogItem>().isItem = false;
 
             list.Add(obj.GetComponent<LogItem>());
 
