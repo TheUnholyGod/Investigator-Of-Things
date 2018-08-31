@@ -233,7 +233,7 @@ MonoBehaviour:
   - {fileID: 571146408}
   m_spawn: {fileID: 819414371}
   m_spawnno: 1
-  m_maxspawnno: 5
+  m_maxspawnno: 200
 --- !u!4 &292807535
 Transform:
   m_ObjectHideFlags: 0

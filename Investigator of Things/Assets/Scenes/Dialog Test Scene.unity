@@ -971,6 +971,12 @@ Prefab:
       propertyPath: DialogManager
       value: 
       objectReference: {fileID: 1557422544}
+    - target: {fileID: 114015908915199234, guid: 354489ef31f3cbb499067c483596e604,
+        type: 2}
+      propertyPath: m_dialogtree
+      value: 
+      objectReference: {fileID: 11400000, guid: d922dd560b962c343a95633b912fb5f6,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 354489ef31f3cbb499067c483596e604, type: 2}
   m_IsPrefabParent: 0
@@ -1212,6 +1218,9 @@ MonoBehaviour:
   - {fileID: 413775188}
   - {fileID: 563284838}
   - {fileID: 1696122579}
+  m_spawn: {fileID: 0}
+  m_spawnno: 0
+  m_maxspawnno: 0
 --- !u!4 &1396222575
 Transform:
   m_ObjectHideFlags: 0

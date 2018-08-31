@@ -180,8 +180,8 @@ public class DialogMakerWindow : EditorWindow {
         DialogTree dt = DialogTree.CreateInstance(Name);
         Dictionary<string, DialogNode> keyValuePairs = new Dictionary<string, DialogNode>();
         AssetDatabase.CreateAsset(dt, "Assets/" + Location + Name + ".asset");
-        AssetDatabase.SaveAssets();
         dt.m_root1 = RecursiveCreation(Root);
+        AssetDatabase.SaveAssets();
     }
 
     DialogNode NodeToDialogNode(Node _node)
@@ -195,7 +195,7 @@ public class DialogMakerWindow : EditorWindow {
     {
         DialogNode dn = NodeToDialogNode(_node);
         AssetDatabase.CreateAsset(dn, "Assets/" + Location + _node.name + ".asset");
-        AssetDatabase.SaveAssets();
+        //AssetDatabase.SaveAssets();
         if (_node.children.Count == 0)
             dn.AddChild(EndNode);
         else

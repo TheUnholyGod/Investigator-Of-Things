@@ -77,12 +77,14 @@ public class AI : MonoBehaviour {
     public virtual void Roam()
     {
         transform.position += (-transform.position + nextWaypoint.transform.position).normalized * 5 * Time.deltaTime;
-
+        transform.LookAt(nextWaypoint.transform.position);
     }
 
     public virtual void Chase()
     {
         transform.position += (-transform.position + m_target.transform.position).normalized * 5 * Time.deltaTime;
+        transform.LookAt(m_target.transform.position);
+
     }
 
     public virtual void Attack()

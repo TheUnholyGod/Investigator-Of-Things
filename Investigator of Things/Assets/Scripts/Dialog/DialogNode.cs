@@ -8,14 +8,14 @@ public class DialogNode : INode<Dialog> {
     [SerializeField]
     public string m_dialogdata = "";
 
-    [SerializeField]
-    DialogNode[] m_allchildren;
+
 
     List<DialogNode> childconverter = new List<DialogNode>();
 
     [SerializeField]
     DelegatePointer m_delegatePointer;
-
+    [SerializeField]
+    DialogNode[] m_allchildren;
     public DelegatePointer DelegatePointer
     {
         get
@@ -37,11 +37,14 @@ public class DialogNode : INode<Dialog> {
             m_data.DialogText = m_dialogdata;
             m_data.DelegatePointer = m_delegatePointer;
         }
-        int count = 0;
-        foreach (DialogNode i in m_allchildren)
+        if (m_children.Count == 0)
         {
-            m_children.Add(count, i);
-            ++count;
+            int count = 0;
+            foreach (DialogNode i in m_allchildren)
+            {
+                m_children.Add(count, i);
+                ++count;
+            }
         }
     }
 
@@ -52,7 +55,17 @@ public class DialogNode : INode<Dialog> {
 
     public void ConvertAll()
     {
+        m_data = CreateInstance<Dialog>();
+        m_data.DialogText = m_dialogdata;
+        m_data.DelegatePointer = m_delegatePointer;
+        
         m_allchildren = childconverter.ToArray();
+        int count = 0;
+        foreach (DialogNode i in m_allchildren)
+        {
+            m_children.Add(count, i);
+            ++count;
+        }
     }
 
     public void Invoke()
