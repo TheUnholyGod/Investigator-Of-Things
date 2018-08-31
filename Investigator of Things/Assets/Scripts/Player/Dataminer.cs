@@ -9,14 +9,15 @@ public class Dataminer : MonoBehaviour {
     bool cooldown = false;
     float cooldowntimer = 0;
     float cooldownreset = 0.15f;
-
-    bool tookDamage = false;
-
     [SerializeField]
     GameObject m_camera;
-
     [SerializeField]
     GameObject m_bullet;
+    [SerializeField]
+    public Transporter transporter;
+
+    public bool intransport = false;
+    public bool istransportmoving = false;
 
 	// Use this for initialization
 	void Start () {
@@ -25,10 +26,7 @@ public class Dataminer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        Vector3 worldpos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(m_camera.transform.position.y - transform.position.y)));
-        transform.LookAt(new Vector3(worldpos.x, transform.position.y, worldpos.z));
-        Movement();  
+        UpdateRotation();
         if(Input.GetMouseButton(0) && !cooldown)
         {
             Shoot();
@@ -45,17 +43,6 @@ public class Dataminer : MonoBehaviour {
         }
         m_camera.transform.position = new Vector3(transform.position.x, m_camera.transform.position.y, transform.position.z);
 
-        if (tookDamage)
-        {
-            Renderer temp = gameObject.GetComponent<Renderer>();
-            temp.material.color = Color.red;
-            tookDamage = false;
-        }
-        else
-        {
-            Renderer temp = gameObject.GetComponent<Renderer>();
-            temp.material.color = new Color(0.3092373f, 0.8301887f, 0.1448914f);
-        }
     }
 
     public void Movement()
@@ -80,13 +67,21 @@ public class Dataminer : MonoBehaviour {
         b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.tag == "Enemy")
-    //    {
-    //        this.m_health -= collision.gameObject.GetComponent<Damage>().DamageVal;
-    //    }
-    //}
+    public void UpdateRotation()
+    {
+        Vector3 worldpos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(m_camera.transform.position.y - transform.position.y)));
+        transform.LookAt(new Vector3(worldpos.x, transform.position.y, worldpos.z));
+        if(!intransport)
+            Movement();
+        else if(intransport && !istransportmoving)
+        {
+            if(Input.GetKeyDown(KeyCode.A)|| Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.D))
+            {
+                transporter.m_stateManager.Currstate = InteractableGameObject.State.AWAIT_INTERACT;
+                intransport = false;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -99,7 +94,6 @@ public class Dataminer : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        tookDamage = true;
         this.m_health -= damage;
     }
 }

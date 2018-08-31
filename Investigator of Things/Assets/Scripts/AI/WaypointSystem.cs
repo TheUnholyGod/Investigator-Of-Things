@@ -29,9 +29,19 @@ public class WaypointSystem : MonoBehaviour {
         if(cooldowntimer > cooldownreset)
         {
             GameObject go = Instantiate(m_spawn, transform.position, Quaternion.identity);
+            
             AI ai = go.GetComponent<AI>();
-            ai.NextWaypoint = m_waypoints[0];
-            ai.WaypointSystem = this;
+            if (ai != null)
+            {
+                ai.NextWaypoint = m_waypoints[0];
+                ai.WaypointSystem = this;
+            }
+            else
+            {
+                Transporter t = go.GetComponent<Transporter>();
+                t.NextWaypoint = m_waypoints[0];
+                t.WaypointSystem = this;
+            }
             m_spawnno++;
             cooldowntimer = 0;
         }

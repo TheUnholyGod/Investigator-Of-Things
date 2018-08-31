@@ -21,9 +21,9 @@ public class RangedAI : AI {
     {
         base.Chase();
 
-        if ((transform.position - m_target.transform.position).magnitude > 15)// || (transform.position - m_waypointSystem.transform.position).magnitude < 10)
+        if ((transform.position - m_target.transform.position).magnitude > 20)// || (transform.position - m_waypointSystem.transform.position).magnitude < 10)
             m_StateManager.Currstate = State.ROAM;
-        else if ((transform.position - m_target.transform.position).magnitude < 7.5)// || (transform.position - m_waypointSystem.transform.position).magnitude < 10)
+        else if ((transform.position - m_target.transform.position).magnitude < 10)// || (transform.position - m_waypointSystem.transform.position).magnitude < 10)
             m_StateManager.Currstate = State.ATTACK;
 
     }
@@ -48,7 +48,7 @@ public class RangedAI : AI {
             b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
         }
 
-        if ((transform.position - m_target.transform.position).magnitude > 7.5)
+        if ((transform.position - m_target.transform.position).magnitude > 10)
             m_StateManager.Currstate = State.CHASE;
     }
 }
