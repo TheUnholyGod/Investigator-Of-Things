@@ -71,6 +71,8 @@ public class LogManager : Singleton<LogManager> {
             obj.GetComponent<LogItem>().enabled = true; ;
             obj.GetComponent<LogItem>().isItem = false;
 
+            obj.name = "UI " + item.gameObject.name;
+
             list.Add(obj.GetComponent<LogItem>());
 
             text.text = list.Count.ToString();

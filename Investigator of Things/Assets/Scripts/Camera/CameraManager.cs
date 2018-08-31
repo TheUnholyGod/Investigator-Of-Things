@@ -37,7 +37,10 @@ public class CameraManager : Singleton<CameraManager>
     public void CheckIfInView(GameObject player)
     {
         if (computerCamera.gameObject.activeSelf)
+        {
+        CameraNo.text = computerCamera.gameObject.name.ToUpper();
             return;
+        }
 
         RaycastHit hit;
 

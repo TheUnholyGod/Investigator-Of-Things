@@ -72,6 +72,8 @@ public class InventoryManager : Singleton<InventoryManager>
             obj.GetComponent<InventoryItem>().enabled = true; ;
             obj.GetComponent<InventoryItem>().isItem = false;
 
+            obj.name = "UI " + item.gameObject.name;
+
             list.Add(obj.GetComponent<InventoryItem>());
 
             text.text = list.Count.ToString();

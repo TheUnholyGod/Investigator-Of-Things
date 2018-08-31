@@ -51,11 +51,15 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
 
     public void OnDrag(PointerEventData eventData)
     {
+        InteractionManager.GetInstance().dragged = this.gameObject;
+
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        InteractionManager.GetInstance().dragged = null;
+
         transform.localPosition = Vector3.zero;
     }
 }

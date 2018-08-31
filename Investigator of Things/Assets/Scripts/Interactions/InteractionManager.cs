@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionManager : MonoBehaviour {
+public class InteractionManager : Singleton<InteractionManager> {
+
+    public GameObject dragged;
 
 	// Use this for initialization
 	void Start () {

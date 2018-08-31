@@ -580,6 +580,26 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1160970500644880, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
+      propertyPath: m_Name
+      value: Logs_Slot 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547681952690424, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
+      propertyPath: m_Name
+      value: Logs_Slot 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018878038956356, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
+      propertyPath: m_Name
+      value: Logs_Slot 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179657373729862, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
+      propertyPath: m_Name
+      value: Logs_Slot 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410824691949132, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
+      propertyPath: m_Name
+      value: Logs_Slot 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b66a6047fac42e46b902cbdc9a76484, type: 2}
   m_IsPrefabParent: 0
@@ -1490,6 +1510,7 @@ MonoBehaviour:
   m_dialogtree: {fileID: 11400000, guid: 622050bf9d49b0949989f803c9375bd8, type: 2}
   DialogManager: {fileID: 1011097828}
   text: {fileID: 1258330624}
+  password: 
   textObject: {fileID: 1258330623}
 --- !u!65 &1485417321
 BoxCollider:
