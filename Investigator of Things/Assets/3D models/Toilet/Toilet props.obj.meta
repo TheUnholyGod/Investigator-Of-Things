@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 7c88657aabc3ac643a0555042898f4a4
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Toilet_props_Mirror_cabinet
+    100004: Toilet_props_Mirror_cabinet_Cabinet_cups
+    100006: Toilet_props_Mirror_cabinet_Cabinet_cups1
+    100008: Toilet_props_Mirror_cabinet_Mirror
+    100010: Toilet_props_Severed_finger
+    100012: Toilet_props_Shower
+    100014: Toilet_props_Shower_curtain
+    100016: Toilet_props_Shower_curtain_pole
+    100018: Toilet_props_Sink
+    100020: Toilet_props_Toilet
+    100022: Toilet_props_Towel
+    100024: Toilet_props_Towel_rack
+    100026: window_cleaning_bottle_Toilet_props
+    400000: //RootNode
+    400002: Toilet_props_Mirror_cabinet
+    400004: Toilet_props_Mirror_cabinet_Cabinet_cups
+    400006: Toilet_props_Mirror_cabinet_Cabinet_cups1
+    400008: Toilet_props_Mirror_cabinet_Mirror
+    400010: Toilet_props_Severed_finger
+    400012: Toilet_props_Shower
+    400014: Toilet_props_Shower_curtain
+    400016: Toilet_props_Shower_curtain_pole
+    400018: Toilet_props_Sink
+    400020: Toilet_props_Toilet
+    400022: Toilet_props_Towel
+    400024: Toilet_props_Towel_rack
+    400026: window_cleaning_bottle_Toilet_props
+    2100000: Toilet_props_Mirror_cabinetMat
+    2100002: Toilet_props_Mirror_cabinet_Cabinet_cupsMat
+    2100004: Toilet_props_Mirror_cabinet_Cabinet_cups1Mat
+    2100006: Toilet_props_Mirror_cabinet_MirrorMat
+    2100008: Toilet_props_Severed_fingerMat
+    2100010: Toilet_props_ShowerMat
+    2100012: Toilet_props_Shower_curtainMat
+    2100014: Toilet_props_Shower_curtain_poleMat
+    2100016: Toilet_props_SinkMat
+    2100018: Toilet_props_ToiletMat
+    2100020: Toilet_props_TowelMat
+    2100022: Toilet_props_Towel_rackMat
+    2100024: window_cleaning_bottle_Toilet_propsMat
+    2300000: Toilet_props_Mirror_cabinet
+    2300002: Toilet_props_Mirror_cabinet_Cabinet_cups
+    2300004: Toilet_props_Mirror_cabinet_Cabinet_cups1
+    2300006: Toilet_props_Mirror_cabinet_Mirror
+    2300008: Toilet_props_Severed_finger
+    2300010: Toilet_props_Shower
+    2300012: Toilet_props_Shower_curtain
+    2300014: Toilet_props_Shower_curtain_pole
+    2300016: Toilet_props_Sink
+    2300018: Toilet_props_Toilet
+    2300020: Toilet_props_Towel
+    2300022: Toilet_props_Towel_rack
+    2300024: window_cleaning_bottle_Toilet_props
+    3300000: Toilet_props_Mirror_cabinet
+    3300002: Toilet_props_Mirror_cabinet_Cabinet_cups
+    3300004: Toilet_props_Mirror_cabinet_Cabinet_cups1
+    3300006: Toilet_props_Mirror_cabinet_Mirror
+    3300008: Toilet_props_Severed_finger
+    3300010: Toilet_props_Shower
+    3300012: Toilet_props_Shower_curtain
+    3300014: Toilet_props_Shower_curtain_pole
+    3300016: Toilet_props_Sink
+    3300018: Toilet_props_Toilet
+    3300020: Toilet_props_Towel
+    3300022: Toilet_props_Towel_rack
+    3300024: window_cleaning_bottle_Toilet_props
+    4300000: Toilet_props_Mirror_cabinet
+    4300002: Toilet_props_Mirror_cabinet_Cabinet_cups
+    4300004: Toilet_props_Mirror_cabinet_Cabinet_cups1
+    4300006: Toilet_props_Mirror_cabinet_Mirror
+    4300008: Toilet_props_Severed_finger
+    4300010: Toilet_props_Shower
+    4300012: Toilet_props_Shower_curtain
+    4300014: Toilet_props_Shower_curtain_pole
+    4300016: Toilet_props_Sink
+    4300018: Toilet_props_Toilet
+    4300020: Toilet_props_Towel
+    4300022: Toilet_props_Towel_rack
+    4300024: window_cleaning_bottle_Toilet_props
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -32,23 +32,6 @@ public class Typing : InteractableObject {
         defaultScale = textObject.transform.localScale;
 	}
 
-    private void OnGUI()
-    {
-        //Event e = Event.current;
-
-        //if (e.isKey)
-        //{
-        //    if (e.keyCode <= KeyCode.Z && e.keyCode >= KeyCode.A)
-        //        text.text += e.keyCode.ToString();
-        //    else if (e.keyCode >= KeyCode.Alpha0 && e.keyCode <= KeyCode.Alpha9)
-        //        text.text += e.keyCode - KeyCode.Alpha0;
-        //    else if (e.keyCode >= KeyCode.Keypad0 && e.keyCode <= KeyCode.Keypad9)
-        //        text.text += e.keyCode - KeyCode.Keypad0;
-        //    else if (e.keyCode == KeyCode.Backspace)
-        //        text.text.Remove(text.text.Length - 1);
-        //}
-    }
-
     // Update is called once per frame
     void Update () {
 

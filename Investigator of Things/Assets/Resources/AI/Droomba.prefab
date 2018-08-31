@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4253849838661064}
   - component: {fileID: 135202053144177190}
   - component: {fileID: 54341312334806966}
-  - component: {fileID: 114839996674877020}
+  - component: {fileID: 114581063910678502}
   m_Layer: 0
   m_Name: Droomba
   m_TagString: Enemy
@@ -673,7 +673,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: cf5576731ddba234a9558af1d34fe72e, type: 3}
---- !u!114 &114839996674877020
+--- !u!114 &114581063910678502
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -681,11 +681,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130047002180496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302bccad69c292541bd8ed27274039f4, type: 3}
+  m_Script: {fileID: 11500000, guid: a9e0bb63e0af97f4d8cdfe06e0054a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 0}
   m_waypointSystem: {fileID: 0}
+  m_bullet: {fileID: 1179249263776856, guid: 9e65c33f37d8af14b85c0424a9786055, type: 2}
 --- !u!135 &135202053144177190
 SphereCollider:
   m_ObjectHideFlags: 1
