@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Dialog\DialogTree.cs" />
     <Compile Include="Assets\Scripts\Effects\CameraStaticEffect.cs" />
     <Compile Include="Assets\Scripts\Interactions\InteractableObject.cs" />
+    <Compile Include="Assets\Scripts\Interactions\Typing.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\LogItem.cs" />

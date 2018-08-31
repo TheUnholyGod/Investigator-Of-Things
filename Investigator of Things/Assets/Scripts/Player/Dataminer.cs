@@ -9,6 +9,9 @@ public class Dataminer : MonoBehaviour {
     bool cooldown = false;
     float cooldowntimer = 0;
     float cooldownreset = 0.15f;
+
+    bool tookDamage = false;
+
     [SerializeField]
     GameObject m_camera;
 
@@ -41,6 +44,18 @@ public class Dataminer : MonoBehaviour {
             cooldowntimer += Time.deltaTime;
         }
         m_camera.transform.position = new Vector3(transform.position.x, m_camera.transform.position.y, transform.position.z);
+
+        if (tookDamage)
+        {
+            Renderer temp = gameObject.GetComponent<Renderer>();
+            temp.material.color = Color.red;
+            tookDamage = false;
+        }
+        else
+        {
+            Renderer temp = gameObject.GetComponent<Renderer>();
+            temp.material.color = new Color(0.3092373f, 0.8301887f, 0.1448914f);
+        }
     }
 
     public void Movement()
@@ -84,6 +99,7 @@ public class Dataminer : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+        tookDamage = true;
         this.m_health -= damage;
     }
 }
