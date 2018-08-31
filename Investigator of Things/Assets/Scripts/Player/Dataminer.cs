@@ -87,6 +87,8 @@ public class Dataminer : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
+            if (other.gameObject.GetComponent<Damage>() == null)
+                return;
             TakeDamage(other.gameObject.GetComponent<Damage>().DamageVal);
             other.enabled = false;
         }

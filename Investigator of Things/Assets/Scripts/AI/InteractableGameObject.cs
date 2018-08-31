@@ -15,6 +15,12 @@ public class InteractableGameObject : MonoBehaviour {
     [SerializeField]
     protected GameObject m_player;
 
+    [SerializeField]
+    Material defaultmat;
+
+    [SerializeField]
+    Material activatedmat;
+
     public StateManager<State> m_stateManager;
 
     void Awake()
@@ -34,6 +40,8 @@ public class InteractableGameObject : MonoBehaviour {
         m_stateManager.AddFunction(new StateDoubleKey<State>(State.ACTIVATE, State.INTERACT).GetHashCode(), ActivateToInteraction);
 
         m_player = GameObject.FindGameObjectWithTag("Player");
+        GetComponent<MeshRenderer>().material = defaultmat;
+
     }
 
     // Use this for initialization
@@ -93,11 +101,12 @@ public class InteractableGameObject : MonoBehaviour {
 
     public virtual void InteractionToActivate()
     {
+        GetComponent<MeshRenderer>().material = activatedmat;
 
     }
 
     public virtual void ActivateToInteraction()
     {
-
+        GetComponent<MeshRenderer>().material = defaultmat;
     }
 }
