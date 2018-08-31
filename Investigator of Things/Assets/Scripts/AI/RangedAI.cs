@@ -21,9 +21,6 @@ public class RangedAI : AI {
     {
         base.Chase();
 
-        Vector3 dir = (m_target.transform.position - transform.position);
-        transform.forward = Vector3.Lerp(transform.forward, dir.normalized, 5 * Time.deltaTime);
-
         if ((transform.position - m_target.transform.position).magnitude > 20)// || (transform.position - m_waypointSystem.transform.position).magnitude < 10)
             m_StateManager.Currstate = State.ROAM;
         else if ((transform.position - m_target.transform.position).magnitude < 10)// || (transform.position - m_waypointSystem.transform.position).magnitude < 10)
@@ -34,9 +31,6 @@ public class RangedAI : AI {
     public override void Attack()
     {
         base.Attack();
-        
-        Vector3 dir = (m_target.transform.position - transform.position);
-        transform.forward = Vector3.Lerp(transform.forward, dir.normalized, 5 * Time.deltaTime);
 
         cooldowntimer += Time.deltaTime;
 
@@ -44,11 +38,13 @@ public class RangedAI : AI {
         {
             cooldowntimer = 0;
 
-            GameObject bullet = Instantiate(m_bullet, transform.position + (dir.normalized * 1.75f), Quaternion.identity);
+            Vector3 attackDir = (m_target.transform.position - transform.position).normalized;
+
+            GameObject bullet = Instantiate(m_bullet, transform.position + (attackDir * 1.75f), Quaternion.identity);
             Bullet b = bullet.GetComponent<Bullet>();
             b.gameObject.tag = "Enemy";
 
-            b.Direction = dir.normalized;
+            b.Direction = attackDir;
             b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
         }
 

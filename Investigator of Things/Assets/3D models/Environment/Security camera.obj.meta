@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: e18500fe3784b464bacb09df6cd00c62
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Security_camera_base_Security_camera_Mechnanical_props
+    100004: Security_camera_Mechnanical_props_camera_body
+    100006: Security_camera_Mechnanical_props_Camera_frame
+    100008: Security_camera_Mechnanical_props_Camera_stand
+    100010: Security_camera_Mechnanical_props_Security_camera_frame
+    400000: //RootNode
+    400002: Security_camera_base_Security_camera_Mechnanical_props
+    400004: Security_camera_Mechnanical_props_camera_body
+    400006: Security_camera_Mechnanical_props_Camera_frame
+    400008: Security_camera_Mechnanical_props_Camera_stand
+    400010: Security_camera_Mechnanical_props_Security_camera_frame
+    2100000: Security_camera_base_Security_camera_Mechnanical_propsMat
+    2100002: Security_camera_Mechnanical_props_camera_bodyMat
+    2100004: Security_camera_Mechnanical_props_Camera_frameMat
+    2100006: Security_camera_Mechnanical_props_Camera_standMat
+    2100008: Security_camera_Mechnanical_props_Security_camera_frameMat
+    2300000: Security_camera_base_Security_camera_Mechnanical_props
+    2300002: Security_camera_Mechnanical_props_camera_body
+    2300004: Security_camera_Mechnanical_props_Camera_frame
+    2300006: Security_camera_Mechnanical_props_Camera_stand
+    2300008: Security_camera_Mechnanical_props_Security_camera_frame
+    3300000: Security_camera_base_Security_camera_Mechnanical_props
+    3300002: Security_camera_Mechnanical_props_camera_body
+    3300004: Security_camera_Mechnanical_props_Camera_frame
+    3300006: Security_camera_Mechnanical_props_Camera_stand
+    3300008: Security_camera_Mechnanical_props_Security_camera_frame
+    4300000: Security_camera_base_Security_camera_Mechnanical_props
+    4300002: Security_camera_Mechnanical_props_camera_body
+    4300004: Security_camera_Mechnanical_props_Camera_frame
+    4300006: Security_camera_Mechnanical_props_Camera_stand
+    4300008: Security_camera_Mechnanical_props_Security_camera_frame
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
