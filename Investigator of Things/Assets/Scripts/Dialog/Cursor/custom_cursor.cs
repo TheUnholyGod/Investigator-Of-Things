@@ -179,6 +179,7 @@ public class custom_cursor : MonoBehaviour
                 if (go_on_hit_object.GetComponent<MeshRenderer>() != null)
                 {
                     Material material = new Material(Shader.Find("TBS/Smooth2"));
+                    material.mainTexture = go_on_hit_object.GetComponent<MeshRenderer>().material.mainTexture;
                     material.color = color_original;
                     go_on_hit_object.GetComponent<Renderer>().material = material;
 
@@ -188,22 +189,26 @@ public class custom_cursor : MonoBehaviour
 
                     foreach(MeshRenderer mr in temp_array)
                     {
-                        material = new Material(Shader.Find("TBS/Smooth2"));
+                        Material material1 = new Material(Shader.Find("TBS/Smooth2"));
+                        material1.mainTexture = mr.material.mainTexture;
+                        material1.color = color_original;
+                        mr.material = material1;
+                        //material = new Material(Shader.Find("TBS/Smooth2"));
 
-                        if (i == 0)
-                        {
-                            ++i;
-                            continue;
-                        }
+                        //if (i == 0)
+                        //{
+                        //    ++i;
+                        //    continue;
+                        //}
 
-                        if (i < list_ChildColor.Count)
-                            material.color = list_ChildColor[i];
-                        else
-                            break;
+                        //if (i < list_ChildColor.Count)
+                        //    material.color = list_ChildColor[i];
+                        //else
+                        //    break;
 
-                        mr.material = material;
+                        //mr.material = material;
 
-                        ++i;
+                        //++i;
                     }
                     
                 }

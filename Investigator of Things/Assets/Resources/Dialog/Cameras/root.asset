@@ -23,4 +23,9 @@ MonoBehaviour:
 
     5) View Logs'
   m_delegatePointer: {fileID: 0}
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 13d6fd899bd09cf428ff9c99c4911b95, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
