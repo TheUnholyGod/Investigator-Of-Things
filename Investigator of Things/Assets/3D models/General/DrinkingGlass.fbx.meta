@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 67297d802eaf9514a94315b2a78c74ba
+guid: 2c16896f5b9a2d642a03c5c3b7f8dfc5
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.003
+    2100000: Material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: CreditChip
+    4300000: Glass_Empty_V3
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 938ab60580c160140a881db274a482fb, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 3c873cab72efe1c4daecba78a2a5304e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

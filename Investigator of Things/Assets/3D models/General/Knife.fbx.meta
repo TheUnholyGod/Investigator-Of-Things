@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 67297d802eaf9514a94315b2a78c74ba
+guid: 5b2faf406f9fb1a47acf8b65c195533a
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.003
+    2100000: Material.004
     2300000: //RootNode
     3300000: //RootNode
-    4300000: CreditChip
+    4300000: Knife
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 938ab60580c160140a881db274a482fb, type: 2}
+      name: Material.004
+    second: {fileID: 2100000, guid: 80cabf6675265fc428fbd39b16326ba8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
