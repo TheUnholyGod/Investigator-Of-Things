@@ -9,6 +9,19 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
     protected DialogManager DialogManager;
 
+    public DialogTree Dialogtree
+    {
+        get
+        {
+            return m_dialogtree;
+        }
+
+        set
+        {
+            m_dialogtree = value;
+        }
+    }
+
     protected void Awake()
     {
         if (m_dialogtree != null)
@@ -17,7 +30,8 @@ public class InteractableObject : MonoBehaviour {
 
     protected void OnMouseDown()
     {
-        DialogManager.DialogTree = m_dialogtree;
-        DialogManager.TriggerDialog();
+        InteractionManager.GetInstance().CheckForFunction();
+        //DialogManager.DialogTree = m_dialogtree;
+        //DialogManager.TriggerDialog();
     }
 }

@@ -34,7 +34,11 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        OnMouseDown();
+        //OnMouseDown();
+        if(InteractionManager.GetInstance().dragged != this.gameObject)
+            InteractionManager.GetInstance().dragged = this.gameObject;
+        else
+            InteractionManager.GetInstance().dragged = null;
     }
 
     public void PickUp()
@@ -48,6 +52,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
         GameObject temp = GameObject.FindGameObjectWithTag("Dialogue");
         DialogManager = temp.GetComponent<DialogManager>();
     }
+
+
 
     public void OnDrag(PointerEventData eventData)
     {

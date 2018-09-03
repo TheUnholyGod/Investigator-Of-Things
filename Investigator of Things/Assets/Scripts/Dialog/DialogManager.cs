@@ -53,13 +53,20 @@ public class DialogManager : MonoBehaviour {
 		
 	}
 
-    public void TriggerDialog()
+    public void TriggerDialog(int[] _path = null)
     {
         if (hasDialog)
             return;
         hasDialog = true;
         m_textbox.text = "";
         m_DialogTree.MoveToRoot();
+        if (_path != null)
+        {
+            foreach (int i in _path)
+            {
+                m_DialogTree.MoveDown(i);
+            }
+        }
         m_currDialog = m_DialogTree.Current;
         StartCoroutine(DialogFunc());
     }

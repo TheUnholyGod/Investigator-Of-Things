@@ -51,6 +51,12 @@ public class custom_cursor : MonoBehaviour
     private RaycastHit
         rh_rayhit;
 
+    public void SetCursorTexture(Texture2D _tex)
+    {
+        tex2d_default_cursor = _tex;
+        Cursor.SetCursor(tex2d_default_cursor, hot_spot, cur_mode);
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -162,7 +168,7 @@ public class custom_cursor : MonoBehaviour
         {
             if (!b_on_changed)
             {
-                Cursor.SetCursor(tex2d_highlight_cursor, hot_spot, cur_mode);
+                //Cursor.SetCursor(tex2d_highlight_cursor, hot_spot, cur_mode);
 
                 if (go_on_hit_object.GetComponent<MeshRenderer>() != null)
                 {
@@ -225,7 +231,7 @@ public class custom_cursor : MonoBehaviour
                 }
             }
 
-            Cursor.SetCursor(tex2d_default_cursor, hot_spot, cur_mode);
+            //Cursor.SetCursor(tex2d_default_cursor, hot_spot, cur_mode);
         }
 
         if(b_follow_target)
