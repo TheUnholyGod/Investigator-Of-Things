@@ -6,14 +6,11 @@ using UnityEngine.Events;
 public class InteractionManager : Singleton<InteractionManager> {
 
     public GameObject dragged;
-<<<<<<< HEAD
 
     [SerializeField]
     public custom_cursor custom_Cursor;
 
     Dictionary<string, UnityEvent> eventslib = new Dictionary<string, UnityEvent>();
-=======
->>>>>>> edccaebcc1fecd9daeb5d0eac89ba9847e630731
 
 	// Use this for initialization
 	void Start () {

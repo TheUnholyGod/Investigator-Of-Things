@@ -58,13 +58,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
 
     public void OnEndDrag(PointerEventData eventData)
     {
-<<<<<<< HEAD
         InteractionManager.GetInstance().CheckForFunction();
-        
-=======
-        InteractionManager.GetInstance().dragged = null;
 
->>>>>>> edccaebcc1fecd9daeb5d0eac89ba9847e630731
         transform.localPosition = Vector3.zero;
     }
 }
