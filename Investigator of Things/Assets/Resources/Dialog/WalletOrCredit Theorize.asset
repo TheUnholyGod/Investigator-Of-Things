@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: WalletOrCredit Theorize
+  m_EditorClassIdentifier: 
+  m_dialogdata: "\u201CIntriguing, the money has been laid here for all to see, but
+    yet the killer did not take it. I would assume the assaillent wasn\u2019t after
+    his money then\u201D"
+  m_delegatePointer: {fileID: 0}
+  m_allchildren: []
