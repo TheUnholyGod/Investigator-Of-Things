@@ -33,6 +33,9 @@ public class custom_cursor : MonoBehaviour
     private List<Shader>
       list_ChildShader;
 
+    private List<Material>
+        list_material;
+
     private bool
         b_on_changed, 
         b_follow_target,
@@ -78,6 +81,7 @@ public class custom_cursor : MonoBehaviour
 
         list_ChildColor = new List<Color>();
         list_ChildShader = new List<Shader>();
+        list_material = new List<Material>();
     }
 
     // Update is called once per frame
@@ -132,13 +136,15 @@ public class custom_cursor : MonoBehaviour
                                     list_ChildColor.Add(new Color(0, 0, 0, 1));
 
                                 list_ChildShader.Add(mr.material.shader);
+
+                                list_material.Add(mr.material);
                             }
                             b_on_changed = false;
                         }
 
                         b_on_hit = true;
                     }
-                    else if (rh_rayhit.collider.gameObject.CompareTag("Interactable"))
+                    if (rh_rayhit.collider.gameObject.CompareTag("Interactable"))
                     {
                         if (go_on_hit_object != null && go_on_hit_object.GetComponent<MeshRenderer>() != null)
                         {
@@ -257,7 +263,13 @@ public class custom_cursor : MonoBehaviour
         int i = 0;
         foreach (MeshRenderer mr in temp_array)
         {
-            if(i == 0)
+            if (list_material.Count > 0)
+            {
+                mr.material = list_material[i];
+                ++i;
+                continue;
+            }
+            if (i == 0)
             {
                 ++i;
                 continue;
@@ -273,10 +285,10 @@ public class custom_cursor : MonoBehaviour
             }
             else
                 break;
-
             ++i;
         }
 
+        list_material.Clear();
         list_ChildColor.Clear();
         list_ChildShader.Clear();
 
