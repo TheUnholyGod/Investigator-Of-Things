@@ -18,12 +18,17 @@ public class InteractionManager : Singleton<InteractionManager> {
         None,
     }
 
-    private Interactions interaction;
+    private Interactions interaction = Interactions.None;
 
     public GameObject dragged;
 
     [SerializeField]
     public custom_cursor custom_Cursor;
+
+    [SerializeField]
+    TMPro.TextMeshProUGUI textbox;
+
+    string text = "", prevtext = "";
 
     Dictionary<string, UnityEvent> eventslib = new Dictionary<string, UnityEvent>();
 
@@ -49,30 +54,43 @@ public class InteractionManager : Singleton<InteractionManager> {
 	
 	// Update is called once per frame
 	void Update () {
-		if(interaction!= Interactions.None)
+        text = "";
+        GameObject raycasted = custom_Cursor.GetRayCastObject();
+        if (interaction!= Interactions.None)
         {
-            if(Input.GetMouseButton(1))
+            text = interaction.ToString() + " ";
+            if (Input.GetMouseButton(1))
             {
                 interaction = Interactions.None;
                 custom_Cursor.SetCursorTexture(null);
             }
         }
-	}
+        if (raycasted)
+        {
+            text += raycasted.name;
+        }
+        if (prevtext != text)
+        {
+            prevtext = text;
+            textbox.text = text;
+        }
+    }
 
     public void CheckForFunction()
     {
+        GameObject raycasted = custom_Cursor.GetRayCastObject();
+
         if (interaction != Interactions.None)
         {
-            GameObject raycasted = custom_Cursor.GetRayCastObject();
             if (raycasted.GetComponent<InteractableObject>() != null)
             {
                 DialogManager.DialogTree = raycasted.GetComponent<InteractableObject>().Dialogtree;
                 DialogManager.TriggerDialog(new int[] { (int)(interaction) });
             }
+
         }
         else
         {
-            GameObject raycasted = custom_Cursor.GetRayCastObject();
             if (raycasted != null)
             {
                 eventslib["Cube"].Invoke();
