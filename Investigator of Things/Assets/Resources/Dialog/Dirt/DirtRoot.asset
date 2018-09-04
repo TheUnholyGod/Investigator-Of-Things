@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: DirtRoot
+  m_EditorClassIdentifier: 
+  m_dialogdata: This is dirt
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 44b4fcefe565eab4a99a9c232f5e75ae, type: 2}
+  - {fileID: 11400000, guid: 87895061a9b8a67468927a6a42987655, type: 2}
+  - {fileID: 11400000, guid: b08d9f0233f5f60479d510a519faf149, type: 2}
+  - {fileID: 11400000, guid: 20027aaa5e5963f449f3f96b3fadf945, type: 2}
+  - {fileID: 11400000, guid: 87284179f22568b4a92f51102c649112, type: 2}

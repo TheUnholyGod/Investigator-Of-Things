@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: StickyNoteUse
+  m_EditorClassIdentifier: 
+  m_dialogdata: "\u201CERROR HORN SOUND\u201D\r\n\u201COf course it\u2019s never that
+    easy\u201D\r\n\u201CA hint?\u201D\r\n\u201CWealth is the ability to fully experience
+    life. --Henry David Thoreau\u201D\r"
+  m_delegatePointer: {fileID: 0}
+  m_allchildren: []
