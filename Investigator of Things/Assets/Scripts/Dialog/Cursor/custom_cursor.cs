@@ -150,17 +150,7 @@ public class custom_cursor : MonoBehaviour
                     }
                     if (rh_rayhit.collider.gameObject.CompareTag("Interactable") || rh_rayhit.collider.gameObject.CompareTag("HighlightParent"))
                     {
-                        if (go_on_hit_object != null && (go_on_hit_object.GetComponent<MeshRenderer>() != null))
-                        {
-                            ChangeColorBackToDefault();
-                        }
-                        else
-                        {
-                            go_selection_circle.SetActive(false);
-                        }
-
                         go_on_hit_object = rh_rayhit.collider.gameObject;
-                        //go_selection_circle.SetActive(true);
                         b_on_changed = false;
                         b_on_hit = true;
                     }
@@ -187,12 +177,9 @@ public class custom_cursor : MonoBehaviour
                         Material material = new Material(Shader.Find("TBS/Smooth2"));
                         material.mainTexture = go_on_hit_object.GetComponent<MeshRenderer>().material.mainTexture;
                         material.color = color_original;
-                        go_on_hit_object.GetComponent<Renderer>().material = material;
+                        go_on_hit_object.GetComponent<MeshRenderer>().material = material;
                     }
                     MeshRenderer[] temp_array = go_on_hit_object.GetComponentsInChildren<MeshRenderer>();
-
-                    int i = 0;
-
                     foreach(MeshRenderer mr in temp_array)
                     {
                         Material material1 = new Material(Shader.Find("TBS/Smooth2"));
