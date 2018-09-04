@@ -14,4 +14,5 @@ MonoBehaviour:
   m_dialogdata: "\u201CThis is not an ordinary password, it seems to be requesting
     an update continuously from somewhere. As if the password would keep changing.\""
   m_delegatePointer: {fileID: 0}
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
