@@ -105,17 +105,10 @@
     <None Include="Assets\Shader\HighLight_Shader.shader" />
     <None Include="Assets\Shader\ProjectorAdditiveTint.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-<<<<<<< HEAD
       <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-=======
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
->>>>>>> 49fe337c40b204f94fdfb8703aad54119ed8d305
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity2018.1.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -316,17 +309,10 @@
       <HintPath>C:/Program Files/Unity2018.1.0f2/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Editor">
-<<<<<<< HEAD
       <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Runtime">
       <HintPath>C:/Users/KamkIGCC/Documents/GitHub/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
-=======
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="TextMeshPro-2017.3-Runtime">
-      <HintPath>C:/Users/KamkIGCC/Documents/IGCC Team 6/Investigator-Of-Things/Investigator of Things/Assets/Plugins/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
->>>>>>> 49fe337c40b204f94fdfb8703aad54119ed8d305
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/KamkIGCC/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

@@ -8,6 +8,8 @@ public class custom_cursor : MonoBehaviour
         tex2d_default_cursor,       //2D Texture of default cursor
         tex2d_highlight_cursor;     //2D Texture of cursor when hovering over objects
 
+    Camera currentCamera;
+
     public CursorMode
         cur_mode;
 
@@ -87,6 +89,7 @@ public class custom_cursor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentCamera = CameraManager.GetInstance().mainCamera;
         if(f_raycast_timer > 0)
         {
             --f_raycast_timer;
@@ -96,7 +99,7 @@ public class custom_cursor : MonoBehaviour
         {
             if (!(Input.GetMouseButton(2) || Input.GetMouseButton(1)))
             {
-                r_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                r_ray = currentCamera.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(r_ray, out rh_rayhit))
                 {
