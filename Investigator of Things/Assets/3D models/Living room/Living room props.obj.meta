@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: ebdf7b73cacb02a4d84e5c39f6e7cb98
-=======
-guid: 488868f84d076dc4398df39d0de3c6b5
->>>>>>> f26d9cd1a4e080feae1fc9468ba53882b2485983
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -345,6 +341,7 @@ ModelImporter:
     4300106: Living_room_props_Pillows_Pillow1
     4300108: Living_room_props_Pillows_Pillow2
     4300110: Shutters_Living_room_props
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -420,7 +417,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: d36d0c3addf87b740bfeef4a406c22f8
-=======
-guid: 3c78364b0241beb4e8d7ad10f8700ba8
->>>>>>> f26d9cd1a4e080feae1fc9468ba53882b2485983
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -33,6 +29,7 @@ ModelImporter:
     4300002: Living_room_props_1_Bar_stool
     4300004: Living_room_props_1_Bar_stool1
     4300006: Living_room_props_1_Tiny_cupboard
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -108,7 +105,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
