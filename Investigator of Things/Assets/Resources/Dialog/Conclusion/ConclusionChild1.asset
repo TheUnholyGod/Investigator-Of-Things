@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: ConclusionChild1
+  m_EditorClassIdentifier: 
+  m_dialogdata: "P: Let\u2019s start with his ex. She she had been drunk texting him
+    at the presumed time of murder so she has an alibi, just need to verify it.\r\nB:
+    Aalrigh, how about corporate interests?\r\nP: There were signs of tampering in
+    the system, like someone was trying to frame someone else.\r\nB: So we should
+    look into this then?\r\nP: Not in the way you think sir. The tampering was very
+    basic almost like it was someone\u2019s first attempt at such a thing. Not someone
+    who\u2019d be trained for it.\r\nP: And what was interesting is whoever did this
+    tried to frame our chem addicted suspect.\r\nBut as I said. The forgery was not
+    thorough enough.\r"
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 22c650664ed9ad54e9cf53549976c633, type: 2}

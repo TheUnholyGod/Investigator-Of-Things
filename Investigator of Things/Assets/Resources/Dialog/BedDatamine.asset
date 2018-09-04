@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: BedDatamine
+  m_EditorClassIdentifier: 
+  m_dialogdata: "*Gibberish*\r\n21.07.2037\r\nInitiating wake up protocol 06:55\r\nIllumination
+    0,2 06:55\r\nIllumination 0,3 06:56\r\nIllumination 0,4 06:57\r\nBegin playback
+    \u201CLe chant des oiseaux - Cl\xE9ment Janequin\u201D (Song of the birds) 06:57\r\nIllumination
+    0,5 06:58\r\nGood morning Daniel 07:00\r\nDaniel has begun sleeping at 23:13\r\nIllumination
+    0\r\n22.07.2307\r\nDaniel has woken up at 01:46\r\n*01010011 01001100 01000101
+    01000101 01010000 00100000 01000101 01010100 01000101 01010010 01001110 01000001
+    01001100 00101100 00100000 01001101 01011001 00100000 01000100 01000101 01000001
+    01010010 00100000 01000110 01000001 01010100 01001000 01000101 01010010 Gibberish
+    data*\r"
+  m_delegatePointer: {fileID: 0}
+  m_allchildren: []

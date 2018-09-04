@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da351891d1a18d1488e383a36832a1f0, type: 3}
   m_Name: BodyTree
   m_EditorClassIdentifier: 
-  m_root1: {fileID: 0}
+  m_root1: {fileID: 11400000, guid: c142d4dd02c9a8a438a814e7ee6b796d, type: 2}

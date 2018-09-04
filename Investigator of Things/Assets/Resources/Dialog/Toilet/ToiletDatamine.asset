@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: ToiletDatamine
+  m_EditorClassIdentifier: 
+  m_dialogdata: "*Gibberish data*\r\n21.07.2037\r\nToilet session begun at 07:01\r\nContents
+    analyzed.\r\nDietary contents within prescribed diet\r\nFlushing\r\nToilet session
+    begun at 21:46\r\nContents analyzed\r\nTrash detected\r\nManual flush initiated\r\nInitiate
+    playback of message:\r\nPlease do not flush trash in the toilet, all damages will
+    be deducted from your account if you are found to be responsible, please use the
+    trash.\r"
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}

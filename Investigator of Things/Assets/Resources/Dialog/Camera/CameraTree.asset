@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da351891d1a18d1488e383a36832a1f0, type: 3}
   m_Name: CameraTree
   m_EditorClassIdentifier: 
-  m_root1: {fileID: 11400000, guid: fe24fbbc3f8bfe045bbff861181d9932, type: 2}
+  m_root1: {fileID: 11400000, guid: 1468267be9cbe3643b9d456a7b5b6d6c, type: 2}
