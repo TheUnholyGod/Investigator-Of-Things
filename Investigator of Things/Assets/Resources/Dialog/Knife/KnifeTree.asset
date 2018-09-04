@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da351891d1a18d1488e383a36832a1f0, type: 3}
   m_Name: KnifeTree
   m_EditorClassIdentifier: 
-  m_root1: {fileID: 0}
+  m_root1: {fileID: 11400000, guid: dc7a47ae3d9420647a99f63bc18897b5, type: 2}

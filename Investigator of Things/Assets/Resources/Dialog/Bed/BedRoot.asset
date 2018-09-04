@@ -13,4 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogdata: This is a bed
   m_delegatePointer: {fileID: 0}
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: e1912d4529fd3d545abf0f7d7b571321, type: 2}
+  - {fileID: 11400000, guid: bed46e81a675435468101561fc1028d5, type: 2}
+  - {fileID: 11400000, guid: 37237f06d7b34554d9dcf2f0601999d0, type: 2}
