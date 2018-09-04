@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: BodyRoot
+  m_EditorClassIdentifier: 
+  m_dialogdata: This is a dead body
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 0fea31b3ac6927146ba621960a1d8682, type: 2}
+  - {fileID: 11400000, guid: 94817db7f2741a848b7884eb5931075c, type: 2}
+  - {fileID: 11400000, guid: 4ebc6013eceeb1a4a82e8d642fa79268, type: 2}
+  - {fileID: 11400000, guid: 0fea31b3ac6927146ba621960a1d8682, type: 2}
+  - {fileID: 11400000, guid: 80e9767a90028a246a0e7359a9d04e6c, type: 2}
+  - {fileID: 11400000, guid: 96ac16699499d154bb57520a7b0b1012, type: 2}
+  - {fileID: 11400000, guid: 9b8bbc527d9662c4ba3740813e9013e0, type: 2}
+  - {fileID: 11400000, guid: 11c31982bc0fef747baf640f59cdb11d, type: 2}
