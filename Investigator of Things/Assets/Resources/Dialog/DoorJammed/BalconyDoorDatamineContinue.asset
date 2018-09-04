@@ -16,4 +16,4 @@ MonoBehaviour:
     01010010 01001111 01001111 01001101 01000010 01000001 at 02:49\r"
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 8f125fc1ed3bc034fa704c78a538d00a, type: 2}
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}

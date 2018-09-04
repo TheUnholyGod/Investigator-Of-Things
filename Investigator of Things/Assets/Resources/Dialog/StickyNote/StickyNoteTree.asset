@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da351891d1a18d1488e383a36832a1f0, type: 3}
   m_Name: StickyNoteTree
   m_EditorClassIdentifier: 
-  m_root1: {fileID: 0}
+  m_root1: {fileID: 11400000, guid: 05e01227b461a0a499ffcfaf17b2c2c4, type: 2}

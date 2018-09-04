@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaypointSystem : MonoBehaviour {
+
+    [SerializeField]
+    bool loop = true;
+
     [SerializeField]
     GameObject[] m_waypoints;
 
@@ -63,7 +67,7 @@ public class WaypointSystem : MonoBehaviour {
                 getnext = true;
             }
         }
-        if (!ret)
+        if (!ret && !loop)
             ret = m_waypoints[0];
         return ret;
     }

@@ -20,7 +20,6 @@ public class Typing : InteractableObject {
     Quaternion defaultRotation;
 
     bool enableTyping = false;
-    public bool typingLock = false;
 
 	// Use this for initialization
 	void Start ()
@@ -55,9 +54,6 @@ public class Typing : InteractableObject {
                 {
                     Debug.Log(password.Equals(text.text));
                 }
-
-                if (typingLock)
-                    return;
 
                 foreach (char characters in Input.inputString)
                 {

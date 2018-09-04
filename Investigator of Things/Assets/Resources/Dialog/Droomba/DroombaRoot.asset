@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: DroombaRoot
+  m_EditorClassIdentifier: 
+  m_dialogdata: This is a droomba
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 904b894a83100ac4ba384a8d02b48324, type: 2}
+  - {fileID: 11400000, guid: d6cb4b0a6629bc24fb456bdddc744faf, type: 2}
+  - {fileID: 11400000, guid: 97707438a1d0b2847b7619f2d6790406, type: 2}
+  - {fileID: 11400000, guid: f03ab712633d23c48a832af2f780e3cf, type: 2}
+  - {fileID: 11400000, guid: 4aa1814ab97ab2a46a370c4e249ddfc7, type: 2}
+  - {fileID: 11400000, guid: a92ef8b671bbb17449e82ff38245ab19, type: 2}

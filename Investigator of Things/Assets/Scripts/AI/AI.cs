@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AI : MonoBehaviour {
 
+
     protected enum State
     {
         ROAM,

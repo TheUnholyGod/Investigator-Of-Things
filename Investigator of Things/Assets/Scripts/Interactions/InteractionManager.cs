@@ -51,12 +51,12 @@ public class InteractionManager : Singleton<InteractionManager> {
         e.AddListener(() => { Debug.Log("Interact"); });
         eventslib.Add("Cube", e);		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         text = "";
         GameObject raycasted = custom_Cursor.GetRayCastObject();
-        if (interaction!= Interactions.None)
+        if (interaction != Interactions.None)
         {
             text = interaction.ToString() + " ";
             if (Input.GetMouseButton(1))
@@ -67,7 +67,8 @@ public class InteractionManager : Singleton<InteractionManager> {
         }
         if (raycasted)
         {
-            text += raycasted.name;
+            if (raycasted.gameObject.CompareTag("Interactable") || raycasted.gameObject.CompareTag("HighlightParent"))
+                text += raycasted.name;
         }
         if (prevtext != text)
         {

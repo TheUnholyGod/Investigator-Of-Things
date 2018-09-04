@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da351891d1a18d1488e383a36832a1f0, type: 3}
   m_Name: ComputerBeforePowerTree
   m_EditorClassIdentifier: 
-  m_root1: {fileID: 0}
+  m_root1: {fileID: 11400000, guid: 0b8035250fc1ea040849506a5784a6a6, type: 2}

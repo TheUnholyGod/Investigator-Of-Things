@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: TableRoot
+  m_EditorClassIdentifier: 
+  m_dialogdata: This is a table
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 42ef0308b66dd1a4ea2416de608f4aaa, type: 2}
+  - {fileID: 11400000, guid: c0a28323d937e534a925163f19d02823, type: 2}

@@ -100,53 +100,56 @@ public class custom_cursor : MonoBehaviour
 
                 if (Physics.Raycast(r_ray, out rh_rayhit))
                 {
-                    if (rh_rayhit.collider.gameObject.GetComponent<MeshRenderer>() != null || rh_rayhit.collider.gameObject.CompareTag("HighlightParent"))
+                    if (rh_rayhit.collider.gameObject.CompareTag("Interactable") || rh_rayhit.collider.gameObject.CompareTag("HighlightParent"))
                     {
-                        vec3_raycast_position = rh_rayhit.point;
-
-                        if (rh_rayhit.collider.gameObject != go_on_hit_object)
+                        if (rh_rayhit.collider.gameObject.GetComponent<MeshRenderer>() != null || rh_rayhit.collider.gameObject.CompareTag("HighlightParent"))
                         {
-                            if (go_on_hit_object != null && (go_on_hit_object.GetComponent<MeshRenderer>() != null || go_on_hit_object.CompareTag("HighlightParent")))
-                            {
-                                ChangeColorBackToDefault();
-                            }
-                            else
-                            {
-                                go_selection_circle.SetActive(false);
-                            }
+                            vec3_raycast_position = rh_rayhit.point;
 
-                            go_on_hit_object = rh_rayhit.collider.gameObject;
-                            if (go_on_hit_object.GetComponent<MeshRenderer>() != null)
+                            if (rh_rayhit.collider.gameObject != go_on_hit_object)
                             {
-                                if (go_on_hit_object.GetComponent<MeshRenderer>().material.HasProperty("_Color"))
+                                if (go_on_hit_object != null && (go_on_hit_object.GetComponent<MeshRenderer>() != null || go_on_hit_object.CompareTag("HighlightParent")))
                                 {
-                                    color_original = go_on_hit_object.GetComponent<MeshRenderer>().material.GetColor("_Color");
+                                    ChangeColorBackToDefault();
                                 }
-                                shader_original = go_on_hit_object.GetComponent<MeshRenderer>().material.shader;
-
-                            }
-                            else
-                                color_original = new Color(0, 0, 0, 1);
-
-
-
-                            MeshRenderer[] temp_array = go_on_hit_object.GetComponentsInChildren<MeshRenderer>();
-
-                            foreach (MeshRenderer mr in temp_array)
-                            {
-                                if (mr.material.HasProperty("_Color"))
-                                    list_ChildColor.Add(mr.material.GetColor("_Color"));
                                 else
-                                    list_ChildColor.Add(new Color(0, 0, 0, 1));
+                                {
+                                    go_selection_circle.SetActive(false);
+                                }
 
-                                list_ChildShader.Add(mr.material.shader);
+                                go_on_hit_object = rh_rayhit.collider.gameObject;
+                                if (go_on_hit_object.GetComponent<MeshRenderer>() != null)
+                                {
+                                    if (go_on_hit_object.GetComponent<MeshRenderer>().material.HasProperty("_Color"))
+                                    {
+                                        color_original = go_on_hit_object.GetComponent<MeshRenderer>().material.GetColor("_Color");
+                                    }
+                                    shader_original = go_on_hit_object.GetComponent<MeshRenderer>().material.shader;
 
-                                list_material.Add(mr.material);
+                                }
+                                else
+                                    color_original = new Color(0, 0, 0, 1);
+
+
+
+                                MeshRenderer[] temp_array = go_on_hit_object.GetComponentsInChildren<MeshRenderer>();
+
+                                foreach (MeshRenderer mr in temp_array)
+                                {
+                                    if (mr.material.HasProperty("_Color"))
+                                        list_ChildColor.Add(mr.material.GetColor("_Color"));
+                                    else
+                                        list_ChildColor.Add(new Color(0, 0, 0, 1));
+
+                                    list_ChildShader.Add(mr.material.shader);
+
+                                    list_material.Add(mr.material);
+                                }
+                                b_on_changed = false;
                             }
-                            b_on_changed = false;
-                        }
 
-                        b_on_hit = true;
+                            b_on_hit = true;
+                        }
                     }
                     if (rh_rayhit.collider.gameObject.CompareTag("Interactable") || rh_rayhit.collider.gameObject.CompareTag("HighlightParent"))
                     {

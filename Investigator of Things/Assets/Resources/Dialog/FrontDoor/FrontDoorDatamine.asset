@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: FrontDoorDatamine
+  m_EditorClassIdentifier: 
+  m_dialogdata: "*Gibberish*\r\n 21.07.2037\r\n Door opened by Daniel from the inside
+    at 07:29\r\n Door opened by Daniel from the outside at 21:40\r\n01000010 01001001
+    01010010 01000100 00100000 01010111 01000001 01010100 01000011 01001000 01001001
+    01001110 01000111 00100000 01000001 01000111 01000001 01001001 01001110 00101100
+    00100000 01000110 01000001 01010100 01001000 01000101 01010010 00111111 *GIBBERISH
+    DATA*\r"
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
