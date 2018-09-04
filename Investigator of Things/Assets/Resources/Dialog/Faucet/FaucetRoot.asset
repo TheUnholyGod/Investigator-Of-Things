@@ -9,9 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
-  m_Name: ComputerBeforePowerInspect
+  m_Name: FaucetRoot
   m_EditorClassIdentifier: 
-  m_dialogdata: "\u201CThe computer, from here I should be able to restart the system\u201D"
+  m_dialogdata: This is a faucet
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  - {fileID: 11400000, guid: 68c61b0c945489b4e8a54dc986a8dae5, type: 2}
+  - {fileID: 11400000, guid: 9b9257e78cb93cb4192fc5ca8af59bf4, type: 2}
+  - {fileID: 11400000, guid: d05dd62ee7fd5fa478412ef985bf223a, type: 2}

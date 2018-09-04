@@ -9,9 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
-  m_Name: ComputerBeforePowerInspect
+  m_Name: FridgeRoot
   m_EditorClassIdentifier: 
-  m_dialogdata: "\u201CThe computer, from here I should be able to restart the system\u201D"
+  m_dialogdata: This is a fridge
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  - {fileID: 11400000, guid: 1adb83007368d9b4696e34c2d3994878, type: 2}
+  - {fileID: 11400000, guid: c8b7820010ab08d4ea1c2dcb74e14657, type: 2}
+  - {fileID: 11400000, guid: 19b988fe7be66734fb2e63a5e4761234, type: 2}

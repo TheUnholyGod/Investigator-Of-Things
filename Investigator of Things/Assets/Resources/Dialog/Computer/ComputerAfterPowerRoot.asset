@@ -9,9 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
-  m_Name: ComputerBeforePowerInspect
+  m_Name: ComputerAfterPowerRoot
   m_EditorClassIdentifier: 
-  m_dialogdata: "\u201CThe computer, from here I should be able to restart the system\u201D"
+  m_dialogdata: This is an unlocked computer
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  - {fileID: 11400000, guid: 7a82c96605f7a5b4d871088c14d0e348, type: 2}
+  - {fileID: 11400000, guid: 62a17f382ee51294b9549785a6b92518, type: 2}
+  - {fileID: 11400000, guid: 92c1a9b8e5702e44a86316da70c9f64d, type: 2}

@@ -9,9 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
-  m_Name: ComputerBeforePowerInspect
+  m_Name: BrokenPotRoot
   m_EditorClassIdentifier: 
-  m_dialogdata: "\u201CThe computer, from here I should be able to restart the system\u201D"
+  m_dialogdata: This is a broken flower pot
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  - {fileID: 11400000, guid: a15820df84e247a4a9a1432f6afc63e2, type: 2}
+  - {fileID: 11400000, guid: 5c3b1235fdc502a4a9eb513bb0c11871, type: 2}
+  - {fileID: 11400000, guid: e6fd197a7c660d64190be3605e040135, type: 2}

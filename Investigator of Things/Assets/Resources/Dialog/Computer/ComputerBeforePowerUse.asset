@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogdata: "\u201CA password of course\u2026\u201D"
   m_delegatePointer: {fileID: 0}
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
-  m_Name: ComputerBeforePowerInspect
+  m_Name: CameraAfterPowerRoot
   m_EditorClassIdentifier: 
-  m_dialogdata: "\u201CThe computer, from here I should be able to restart the system\u201D"
+  m_dialogdata: This is a powered camera
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
+  - {fileID: 11400000, guid: b508e61fce01c2a418d9a7eb43e693c9, type: 2}
+  - {fileID: 11400000, guid: ff976c6c2a683034a8bda894ff356300, type: 2}
