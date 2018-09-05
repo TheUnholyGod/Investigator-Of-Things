@@ -16,8 +16,6 @@ public class VolumeIcon_Change : MonoBehaviour {
     {
         slider = GetComponent<Slider>();
         image = VolumeIconObject.GetComponent<Image>();
-
-        AudioManager.GetInstance().SetVolume(slider.value);
 	}
 	
 	void Update ()
