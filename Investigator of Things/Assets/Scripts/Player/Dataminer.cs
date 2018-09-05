@@ -60,11 +60,13 @@ public class Dataminer : MonoBehaviour {
     public void Shoot()
     {
         Vector3 Direction = (-transform.position + Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(m_camera.transform.position.y - transform.position.y)))).normalized;
+        Direction.Set(Direction.x, 0, Direction.z);
         GameObject newb = Instantiate(m_bullet, transform.position + (Direction * 1.75f), Quaternion.identity);
         Bullet b = newb.GetComponent<Bullet>();
 
         b.Direction = Direction;
         b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
+        b.transform.rotation = transform.rotation;
     }
 
     public void UpdateRotation()
