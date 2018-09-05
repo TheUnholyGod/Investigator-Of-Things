@@ -41,7 +41,7 @@ public class InventoryManager : Singleton<InventoryManager>
             //obj.transform.localPosition = Vector3.zero;
             //obj.transform.localScale = new Vector3(1, 1, 1);
 
-            List<InventoryItem> list = new List<InventoryItem>();
+            //List<InventoryItem> list = new List<InventoryItem>();
 
             //Image img = obj.AddComponent<Image>();
             //img.sprite = Resources.Load<Sprite>("Icons/" + item.itemName) as Sprite;

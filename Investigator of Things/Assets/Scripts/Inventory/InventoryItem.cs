@@ -29,6 +29,7 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
     {
         itemName = item.itemName;
         m_dialogtree = item.m_dialogtree;
+        m_dialogtree.MoveToRoot();
         DialogManager = item.DialogManager;
     }
 
