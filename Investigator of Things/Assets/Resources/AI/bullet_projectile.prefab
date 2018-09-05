@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33832747647695460}
   - component: {fileID: 23721871482994692}
   - component: {fileID: 114619741932186440}
+  - component: {fileID: 64960156588806188}
   m_Layer: 0
   m_Name: bullet_projectile
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1471504346820600}
+  m_Mesh: {fileID: 4300000, guid: 37a062ba0a41ece44846533e04ce0586, type: 3}
+--- !u!64 &64960156588806188
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1471504346820600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 37a062ba0a41ece44846533e04ce0586, type: 3}
 --- !u!114 &114619741932186440
 MonoBehaviour:

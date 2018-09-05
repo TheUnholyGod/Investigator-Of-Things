@@ -11,6 +11,9 @@ public class MineArea : InteractableGameObject {
     public override void Idle()
     {
         base.Idle();
+        Debug.Log(transform.position);
+        Debug.Log(m_player.transform.position);
+
     }
 
     public override void AwaitInteract()
