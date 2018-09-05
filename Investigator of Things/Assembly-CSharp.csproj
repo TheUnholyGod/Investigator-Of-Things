@@ -62,6 +62,7 @@
     <Compile Include="Assets\Animation\bloodEvent.cs" />
     <Compile Include="Assets\DeathPlane.cs" />
     <Compile Include="Assets\Door.cs" />
+    <Compile Include="Assets\SceneChange.cs" />
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />
     <Compile Include="Assets\Scripts\AI\Damage.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\AI\WaypointSystem.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Delegater\DelegatePointer.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Delegater\RuntimeDelegatePointer.cs" />
+    <Compile Include="Assets\Scripts\BackEnd\GameManager.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
     <Compile Include="Assets\Scripts\BackEnd\StateManager\StateManager.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Assets\Scripts\UI\AudioManager.cs" />
     <Compile Include="Assets\Scripts\UI\UI_LiveOrRecording_Text.cs" />
     <Compile Include="Assets\Scripts\UI\VolumeIcon_Change.cs" />
+    <Compile Include="Assets\TalkingAnimaton.cs" />
     <None Include="Assets\Shader\NewSurfaceShader.shader" />
     <None Include="Assets\Shader\HighLight_Shader.shader" />
     <None Include="Assets\Shader\ProjectorAdditiveTint.shader" />

@@ -184,9 +184,7 @@ C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\TextMeshPro-2017.3-Editor.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\TextMeshPro-2017.3-Runtime.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\Unity.Locator.dll
-C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\Unity.PackageManagerUI.Editor.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.dll
-C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.StandardEvents.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEngine.AccessibilityModule.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEngine.AIModule.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEngine.Analytics.dll
