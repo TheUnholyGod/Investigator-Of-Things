@@ -16,4 +16,6 @@ MonoBehaviour:
   m_allchildren:
   - {fileID: 11400000, guid: 2068e550a2b4f52499323468bae7462a, type: 2}
   - {fileID: 11400000, guid: f9d7321057b74084ba870c049fb80b65, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
   - {fileID: 11400000, guid: a2d7bf327e65353498b8950c6405e31c, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}

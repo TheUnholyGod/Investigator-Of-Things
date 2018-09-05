@@ -22,8 +22,6 @@ public class Player : Singleton<Player> {
 
         Vector3 moveDirection = (target - transform.position);
 
-        Debug.Log(target);
-        Debug.Log(moveDirection);
 
         if (moveDirection.magnitude > 1)
         {

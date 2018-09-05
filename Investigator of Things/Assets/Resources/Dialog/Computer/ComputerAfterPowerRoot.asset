@@ -15,5 +15,7 @@ MonoBehaviour:
   m_delegatePointer: {fileID: 0}
   m_allchildren:
   - {fileID: 11400000, guid: 7a82c96605f7a5b4d871088c14d0e348, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
   - {fileID: 11400000, guid: 62a17f382ee51294b9549785a6b92518, type: 2}
   - {fileID: 11400000, guid: 92c1a9b8e5702e44a86316da70c9f64d, type: 2}
