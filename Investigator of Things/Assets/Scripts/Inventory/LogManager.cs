@@ -18,8 +18,6 @@ public class LogManager : Singleton<LogManager> {
         foreach (GameObject obj in objects)
         {
             GameObject go = Instantiate(obj, obj.transform.position, obj.transform.rotation);
-
-            go.GetComponent<LogItem>().SetDialogueManager();
         }
     }
 
