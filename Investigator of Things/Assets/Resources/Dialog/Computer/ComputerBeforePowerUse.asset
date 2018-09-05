@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: ComputerBeforePowerUse
   m_EditorClassIdentifier: 
   m_dialogdata: "\u201CA password of course\u2026\u201D"
-  m_delegatePointer: {fileID: 0}
+  m_delegatePointer: {fileID: 11400000, guid: 9b528e0d672c18549a4868f8ff5f13d8, type: 2}
   m_allchildren:
   - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
