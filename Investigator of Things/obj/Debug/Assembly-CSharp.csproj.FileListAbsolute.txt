@@ -517,3 +517,5 @@ C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of T
 >>>>>>> 14764afc82bf73a3efd61f86da59c649759dc2d8
 C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.UI.dll
 C:\Users\KamkIGCC\Documents\IGCC Team 6\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.UI.xml
+C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\Unity.PackageManagerUI.Editor.dll
+C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.StandardEvents.dll

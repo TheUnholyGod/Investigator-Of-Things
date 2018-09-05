@@ -21,6 +21,6 @@ public class GameManager : Singleton<GameManager> {
 
     public void FullScreen()
     {
-        Screen.fullScreen = !Screen.fullScreen;
+        Screen.SetResolution(Screen.width, Screen.height, !Screen.fullScreen);
     }
 }

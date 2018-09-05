@@ -18,4 +18,9 @@ public class SceneChange : MonoBehaviour {
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene 2");
     }
+
+    public void LoadMainMenuScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("mainmenu");
+    }
 }

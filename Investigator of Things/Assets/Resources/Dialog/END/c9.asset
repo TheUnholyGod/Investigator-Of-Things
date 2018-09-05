@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dd03913cc4f7544afdb4a4561c89ef, type: 3}
+  m_Name: c9
+  m_EditorClassIdentifier: 
+  m_dialogdata: "Not in the way you think, sir. The tampering was very basic, almost
+    like it was someone\u2019s first attempt at such a thing. Not someone who\u2019d
+    be trained for it."
+  m_delegatePointer: {fileID: 0}
+  m_allchildren:
+  - {fileID: 11400000, guid: 679ccbf4e0ccc8040824ed595a6d8cf4, type: 2}

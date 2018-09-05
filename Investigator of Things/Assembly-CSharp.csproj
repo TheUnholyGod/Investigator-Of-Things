@@ -62,6 +62,7 @@
     <Compile Include="Assets\Animation\bloodEvent.cs" />
     <Compile Include="Assets\DeathPlane.cs" />
     <Compile Include="Assets\Door.cs" />
+    <Compile Include="Assets\Endmanager.cs" />
     <Compile Include="Assets\SceneChange.cs" />
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />

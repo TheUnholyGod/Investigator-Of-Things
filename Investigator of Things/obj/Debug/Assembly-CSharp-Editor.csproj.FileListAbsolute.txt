@@ -428,3 +428,5 @@ C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\obj\Debug\Assembly-CSharp-Editor.dll
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\obj\Debug\Assembly-CSharp-Editor.pdb
 C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\Unity.PackageManagerUI.Editor.dll
+C:\Users\KamkIGCC\Documents\GitHub\Investigator-Of-Things\Investigator of Things\Temp\bin\Debug\UnityEditor.StandardEvents.dll
