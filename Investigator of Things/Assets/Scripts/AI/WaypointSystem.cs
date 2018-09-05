@@ -67,8 +67,12 @@ public class WaypointSystem : MonoBehaviour {
                 getnext = true;
             }
         }
-        if (!ret && !loop)
+        if (!ret && loop)
             ret = m_waypoints[0];
+        else if(!ret && !loop)
+        {
+            
+        }
         return ret;
     }
 }

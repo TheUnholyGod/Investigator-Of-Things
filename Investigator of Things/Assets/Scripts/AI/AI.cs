@@ -12,6 +12,9 @@ public class AI : MonoBehaviour {
         ATTACK,
     }
 
+    [SerializeField]
+    float speed = 5;
+
     protected GameObject m_target;
 
     protected StateManager<State> m_StateManager;
@@ -64,7 +67,7 @@ public class AI : MonoBehaviour {
         m_StateManager.Update();
 	}
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (m_StateManager.Currstate == State.ROAM)
         {
@@ -72,18 +75,19 @@ public class AI : MonoBehaviour {
                 return;
 
             nextWaypoint = m_waypointSystem.GetNextWaypoint(nextWaypoint);
+
         }
     }
 
     public virtual void Roam()
     {
-        transform.position += (-transform.position + nextWaypoint.transform.position).normalized * 5 * Time.deltaTime;
+        transform.position += (-transform.position + nextWaypoint.transform.position).normalized * speed * Time.deltaTime;
         transform.LookAt(nextWaypoint.transform.position);
     }
 
     public virtual void Chase()
     {
-        transform.position += (-transform.position + m_target.transform.position).normalized * 5 * Time.deltaTime;
+        transform.position += (-transform.position + m_target.transform.position).normalized * speed * Time.deltaTime;
         transform.LookAt(m_target.transform.position);
 
     }

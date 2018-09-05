@@ -7,8 +7,21 @@ public class PlayerAI : AI {
     [SerializeField]
     Animator playeranimator;
 
-	// Use this for initialization
-	void Start () {
+    public Animator Playeranimator
+    {
+        get
+        {
+            return playeranimator;
+        }
+
+        set
+        {
+            playeranimator = value;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
             playeranimator.SetBool("iswalking", true);
 
     }
@@ -23,6 +36,26 @@ public class PlayerAI : AI {
         }
         else
             ;// playeranimator.SetBool("iswalking", false);
+
+    }
+
+    public override void Roam()
+    {
+        base.Roam();
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        playeranimator.SetBool("iswalking", true);
+    }
+
+    protected override void OnTriggerEnter(Collider other)
+    {
+        base.OnTriggerEnter(other);
+
+        if (nextWaypoint == null)
+        {
+            playeranimator.SetBool("iswalking", false);
+            GetComponent<Player>().enabled = true;
+            enabled = false;
+        }
 
     }
 }
