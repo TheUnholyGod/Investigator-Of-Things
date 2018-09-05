@@ -58,7 +58,6 @@ public class InteractionManager : Singleton<InteractionManager> {
             InventoryManager.GetInstance().RemoveItem(item);
             item.itemName = "item_drinkingGlass-full";
             InventoryManager.GetInstance().AddItem(item);
-            DialogManager.DialogTree = -
             });
         eventslib.Add("Fill", e);
 	}
