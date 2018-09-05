@@ -29,18 +29,11 @@ public class InventoryManager : Singleton<InventoryManager>
             if (inventory.Count >= 6)
                 return;
 
-            GameObject obj = new GameObject();
-            obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
+            //GameObject obj = new GameObject();
+            //obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
 
-            obj.transform.localPosition = Vector3.zero;
-            obj.transform.localScale = new Vector3(1, 1, 1);
-
-            TextMeshProUGUI text = obj.AddComponent<TextMeshProUGUI>();
-            obj.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0);
-            obj.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0);
-            obj.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -15.0f);
-
-            text.alignment = TextAlignmentOptions.Midline;
+            //obj.transform.localPosition = Vector3.zero;
+            //obj.transform.localScale = new Vector3(1, 1, 1);
 
             //obj = new GameObject();
             //obj.transform.parent = inventoryTab.transform.GetChild(inventory.Count);
@@ -60,7 +53,7 @@ public class InventoryManager : Singleton<InventoryManager>
 
             //list.Add(newItem);
 
-            obj = Instantiate(Resources.Load<GameObject>("Items/UIItem"));
+            GameObject obj = Instantiate(Resources.Load<GameObject>("Items/UIItem"));
             obj.transform.SetParent(inventoryTab.transform.GetChild(inventory.Count));
 
             obj.transform.localScale = new Vector3(1, 1, 1);
@@ -70,13 +63,12 @@ public class InventoryManager : Singleton<InventoryManager>
             obj.GetComponent<InventoryItem>().enabled = true; ;
             obj.GetComponent<InventoryItem>().isItem = false;
 
-            obj.name = "UI " + item.gameObject.name;
+            obj.name = "UI " + item.itemName;
 
             Sprite sprite;
             if (sprite = Resources.Load<Sprite>("Icons/" + item.itemName))
                 obj.GetComponent<Image>().sprite = sprite;
 
-            text.text = list.Count.ToString();
             inventory.Add(item.itemName, obj.GetComponent<InventoryItem>());
 
             Destroy(obj.GetComponent<LogItem>());

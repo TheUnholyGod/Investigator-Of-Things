@@ -21,6 +21,8 @@ public class InteractionManager : Singleton<InteractionManager> {
     private Interactions interaction = Interactions.None;
 
     public GameObject dragged;
+    GameObject raycasted;
+
 
     [SerializeField]
     public custom_cursor custom_Cursor;
@@ -60,12 +62,20 @@ public class InteractionManager : Singleton<InteractionManager> {
             InventoryManager.GetInstance().AddItem(item);
             });
         eventslib.Add("Fill", e);
+
+        e = new UnityEvent();
+        e.AddListener(() =>
+        {
+            InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
+            raycasted.transform.GetChild(0).gameObject.SetActive(true);
+        });
+        eventslib.Add("Spill", e);
 	}
 
     // Update is called once per frame
     void Update() {
         text = "";
-        GameObject raycasted = custom_Cursor.GetRayCastObject();
+        raycasted = custom_Cursor.GetRayCastObject();
         if (interaction != Interactions.None)
         {
             text = interaction.ToString() + " ";
@@ -89,7 +99,7 @@ public class InteractionManager : Singleton<InteractionManager> {
 
     public void CheckForFunction()
     {
-        GameObject raycasted = custom_Cursor.GetRayCastObject();
+        raycasted = custom_Cursor.GetRayCastObject();
 
         if (interaction != Interactions.None)
         {
@@ -106,6 +116,8 @@ public class InteractionManager : Singleton<InteractionManager> {
             {
                 if (dragged != null && dragged.name.Contains("Glass") && raycasted.name.Contains("Faucet"))
                     eventslib["Fill"].Invoke();
+                else if (dragged != null && dragged.name.Contains("full") && raycasted.name.Contains("table"))
+                    eventslib["Spill"].Invoke();
                 else
                     eventslib["Cube"].Invoke();
             }
