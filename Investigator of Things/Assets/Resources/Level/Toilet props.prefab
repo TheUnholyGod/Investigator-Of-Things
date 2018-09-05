@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33095345658603624}
   - component: {fileID: 23859814220568176}
   m_Layer: 0
-  m_Name: Toilet_props_Sink
+  m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33923218193746218}
   - component: {fileID: 23265647114635864}
   m_Layer: 0
-  m_Name: Toilet_props_Mirror_cabinet_Mirror
+  m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 33104500201163836}
   - component: {fileID: 23728450078537912}
   m_Layer: 0
-  m_Name: Toilet_props_Towel
+  m_Name: Towel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 33032500665415060}
   - component: {fileID: 23166309800317774}
   m_Layer: 0
-  m_Name: Toilet_props_Towel_rack
+  m_Name: Towel Rack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 33306765762748314}
   - component: {fileID: 23177316362794220}
   m_Layer: 0
-  m_Name: Toilet_props_Shower_curtain
+  m_Name: Shower Curtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,9 +106,11 @@ GameObject:
   - component: {fileID: 4916488654235278}
   - component: {fileID: 33702904843106698}
   - component: {fileID: 23695814927769856}
+  - component: {fileID: 64540742538443514}
+  - component: {fileID: 114993651805915760}
   m_Layer: 0
-  m_Name: Toilet_props_Toilet
-  m_TagString: Untagged
+  m_Name: Toilet
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +126,7 @@ GameObject:
   - component: {fileID: 33815357146447220}
   - component: {fileID: 23368709272882382}
   m_Layer: 0
-  m_Name: Toilet_props_Mirror_cabinet_Cabinet_cups1
+  m_Name: Cosmetics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +143,7 @@ GameObject:
   - component: {fileID: 33316923015634330}
   - component: {fileID: 23829147088990378}
   m_Layer: 0
-  m_Name: Toilet_props_Shower_curtain_pole
+  m_Name: Curtain Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +160,7 @@ GameObject:
   - component: {fileID: 33043499678931146}
   - component: {fileID: 23775762436181410}
   m_Layer: 0
-  m_Name: Toilet_props_Mirror_cabinet_Cabinet_cups
+  m_Name: Medicine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,7 +177,7 @@ GameObject:
   - component: {fileID: 33411449016657112}
   - component: {fileID: 23668750954819216}
   m_Layer: 0
-  m_Name: Toilet_props_Shower
+  m_Name: Shower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,9 +193,11 @@ GameObject:
   - component: {fileID: 4898615936876570}
   - component: {fileID: 33667395203086594}
   - component: {fileID: 23024553684503352}
+  - component: {fileID: 64853880835477118}
+  - component: {fileID: 114255593427371596}
   m_Layer: 0
-  m_Name: window_cleaning_bottle_Toilet_props
-  m_TagString: Untagged
+  m_Name: Window Cleaning Bottle
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +228,7 @@ GameObject:
   - component: {fileID: 33674170241654360}
   - component: {fileID: 23237416400748806}
   m_Layer: 0
-  m_Name: Toilet_props_Mirror_cabinet
+  m_Name: Mirror Cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,9 +244,11 @@ GameObject:
   - component: {fileID: 4663460400960678}
   - component: {fileID: 33787133279674372}
   - component: {fileID: 23878920452469200}
+  - component: {fileID: 64096267731005722}
+  - component: {fileID: 114967605950517240}
   m_Layer: 0
-  m_Name: Toilet_props_Severed_finger
-  m_TagString: Untagged
+  m_Name: Severed Finger
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,7 +325,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900681366160724}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.491751, y: 0, z: 68.31142}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4082228075167406}
@@ -988,3 +994,84 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178754275118944}
   m_Mesh: {fileID: 4300006, guid: 9dc54a0e9c6b01a42b493af8f85a5427, type: 3}
+--- !u!64 &64096267731005722
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991829401421084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300008, guid: 9dc54a0e9c6b01a42b493af8f85a5427, type: 3}
+--- !u!64 &64540742538443514
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495706688826546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300018, guid: 9dc54a0e9c6b01a42b493af8f85a5427, type: 3}
+--- !u!64 &64853880835477118
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842133445897108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300024, guid: 9dc54a0e9c6b01a42b493af8f85a5427, type: 3}
+--- !u!114 &114255593427371596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842133445897108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe0ad0d247d77d40b9b5f16278559e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogtree: {fileID: 11400000, guid: 2e5ce4bd3bf804c46ad1b4258364c770, type: 2}
+  DialogManager: {fileID: 0}
+--- !u!114 &114967605950517240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991829401421084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe0ad0d247d77d40b9b5f16278559e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogtree: {fileID: 11400000, guid: 8d78665b7800eda46affe4ebe7362a49, type: 2}
+  DialogManager: {fileID: 0}
+--- !u!114 &114993651805915760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495706688826546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe0ad0d247d77d40b9b5f16278559e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogtree: {fileID: 11400000, guid: 6bde2cf394e371541a3a236f1c724f93, type: 2}
+  DialogManager: {fileID: 0}
