@@ -71,7 +71,7 @@ public class AI : MonoBehaviour {
     {
         if (m_StateManager.Currstate == State.ROAM)
         {
-            if (nextWaypoint.GetComponent<Collider>() != other)
+            if (!nextWaypoint || nextWaypoint.GetComponent<Collider>() != other)
                 return;
 
             nextWaypoint = m_waypointSystem.GetNextWaypoint(nextWaypoint);
