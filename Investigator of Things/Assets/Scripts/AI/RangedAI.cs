@@ -34,6 +34,8 @@ public class RangedAI : AI {
 
         cooldowntimer += Time.deltaTime;
 
+        transform.LookAt(m_target.transform.position);
+
         if (cooldowntimer > cooldownreset)
         {
             cooldowntimer = 0;
@@ -46,6 +48,7 @@ public class RangedAI : AI {
 
             b.Direction = attackDir;
             b.Direction.Set(b.Direction.x, transform.position.y, b.Direction.z);
+            b.transform.rotation = transform.rotation;
         }
 
         if ((transform.position - m_target.transform.position).magnitude > 10)

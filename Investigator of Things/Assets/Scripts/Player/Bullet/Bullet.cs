@@ -39,15 +39,34 @@ public class Bullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy" && this.gameObject.tag != "Enemy")
+        if (collision.gameObject.tag != this.gameObject.tag)
         {
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.tag == "Player" && this.gameObject.tag == "Enemy")
-        {
-            collision.gameObject.GetComponent<Dataminer>().TakeDamage(1);
+            if (collision.gameObject.tag == "Enemy" && this.gameObject.tag != "Enemy")
+            {
+                Destroy(collision.gameObject);
+            }
+            else if (collision.gameObject.tag == "Player" && this.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<Dataminer>().TakeDamage(1);
+            }
+            Destroy(this.gameObject);
         }
 
-        Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag != this.gameObject.tag)
+        {
+            if (collision.gameObject.tag == "Enemy" && this.gameObject.tag != "Enemy")
+            {
+                Destroy(collision.gameObject);
+            }
+            else if (collision.gameObject.tag == "Player" && this.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<Dataminer>().TakeDamage(1);
+            }
+            Destroy(this.gameObject);
+        }
     }
 }

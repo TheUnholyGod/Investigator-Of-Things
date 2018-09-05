@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ae1ccb319bd8424ab0dad70637c3e7a
+guid: 7c8c10b701c2ca14490be99722a6693e
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -11,6 +11,7 @@ ModelImporter:
     2300000: Outdoor_props_2
     3300000: Outdoor_props_2
     4300000: Outdoor_props_2
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
