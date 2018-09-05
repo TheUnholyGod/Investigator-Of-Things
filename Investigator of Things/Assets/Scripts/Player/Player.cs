@@ -22,9 +22,13 @@ public class Player : Singleton<Player> {
 
         Vector3 moveDirection = (target - transform.position);
 
+        Debug.Log(target);
+        Debug.Log(moveDirection);
+
         if (moveDirection.magnitude > 1)
         {
-            moveDirection = transform.TransformDirection(moveDirection.normalized);
+            moveDirection.Normalize();
+            //moveDirection = transform.TransformDirection(moveDirection.normalized);
             moveDirection *= speed;
             prevPos = transform.position;
             character.Move(moveDirection);
