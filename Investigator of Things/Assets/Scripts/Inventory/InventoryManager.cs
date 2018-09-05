@@ -7,20 +7,18 @@ using TMPro;
 public class InventoryManager : Singleton<InventoryManager>
 {
     public GameObject inventoryTab;
-    Dictionary<string, List<InventoryItem>> inventory;
+    Dictionary<string, InventoryItem> inventory;
 
 	// Use this for initialization
 	void Start() {
-        inventory = new Dictionary<string, List<InventoryItem>>();
+        inventory = new Dictionary<string, InventoryItem>();
 
-        GameObject[] objects = Resources.LoadAll<GameObject>("InventoryItem");
+        //GameObject[] objects = Resources.LoadAll<GameObject>("InventoryItem");
 
-        foreach (GameObject obj in objects)
-        {
-            GameObject go = Instantiate(obj, obj.transform.position, obj.transform.rotation);
-
-            go.GetComponent<InventoryItem>().SetDialogueManager();
-        }
+        //foreach (GameObject obj in objects)
+        //{
+        //    GameObject go = Instantiate(obj, obj.transform.position, obj.transform.rotation);
+        //}
 
     }
 	
@@ -74,24 +72,25 @@ public class InventoryManager : Singleton<InventoryManager>
 
             obj.name = "UI " + item.gameObject.name;
 
-            list.Add(obj.GetComponent<InventoryItem>());
+            Sprite sprite;
+            if (sprite = Resources.Load<Sprite>("Icons/" + item.itemName))
+                obj.GetComponent<Image>().sprite = sprite;
 
             text.text = list.Count.ToString();
-            inventory.Add(item.itemName, list);
+            inventory.Add(item.itemName, obj.GetComponent<InventoryItem>());
 
             Destroy(obj.GetComponent<LogItem>());
         }
-        else
-        {
-            inventory[item.itemName].Add(item);
-            for (int i = 0; i < inventory.Count; ++i)
-            {
-                List<string> keys = new List<string>(inventory.Keys);
-                if (item.itemName == keys[i])
-                    inventoryTab.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = inventory[item.itemName].Count.ToString();
-            }
-        }
 
         Destroy(item.gameObject);
+    }
+
+    public void RemoveItem(InventoryItem item)
+    {
+        if (inventory.ContainsKey(item.itemName))
+        {
+            Destroy(inventory[item.itemName].gameObject);
+            inventory.Remove(item.itemName);
+        }
     }
 }

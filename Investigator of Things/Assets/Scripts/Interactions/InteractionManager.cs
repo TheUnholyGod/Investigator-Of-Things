@@ -49,7 +49,17 @@ public class InteractionManager : Singleton<InteractionManager> {
     void Start () {
         UnityEvent e = new UnityEvent();
         e.AddListener(() => { Debug.Log("Interact"); });
-        eventslib.Add("Cube", e);		
+        eventslib.Add("Cube", e);
+
+        e = new UnityEvent();
+        e.AddListener(() => {
+            InventoryItem item = dragged.GetComponent<InventoryItem>();
+            //dragged = null;
+            InventoryManager.GetInstance().RemoveItem(item);
+            item.itemName = "item_drinkingGlass-full";
+            InventoryManager.GetInstance().AddItem(item);
+            });
+        eventslib.Add("Fill", e);
 	}
 
     // Update is called once per frame
@@ -94,7 +104,10 @@ public class InteractionManager : Singleton<InteractionManager> {
         {
             if (raycasted != null)
             {
-                eventslib["Cube"].Invoke();
+                if (dragged != null && dragged.name.Contains("Glass") && raycasted.name.Contains("Faucet"))
+                    eventslib["Fill"].Invoke();
+                else
+                    eventslib["Cube"].Invoke();
             }
             dragged = null;
         }

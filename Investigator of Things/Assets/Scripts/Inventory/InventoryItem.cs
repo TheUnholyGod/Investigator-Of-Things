@@ -37,8 +37,8 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
         //OnMouseDown();
         if(InteractionManager.GetInstance().dragged != this.gameObject)
             InteractionManager.GetInstance().dragged = this.gameObject;
-        else
-            InteractionManager.GetInstance().dragged = null;
+        //else
+            //InteractionManager.GetInstance().dragged = null;
     }
 
     public void PickUp()
@@ -59,11 +59,14 @@ public class InventoryItem : InteractableObject,IPointerClickHandler, IDragHandl
     {
         InteractionManager.GetInstance().dragged = this.gameObject;
 
+        Debug.Log(InteractionManager.GetInstance().dragged);
+
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Debug.Log(InteractionManager.GetInstance().dragged);
         InteractionManager.GetInstance().CheckForFunction();
 
         transform.localPosition = Vector3.zero;
