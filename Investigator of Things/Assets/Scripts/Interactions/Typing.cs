@@ -24,7 +24,7 @@ public class Typing : InteractableObject {
 	// Use this for initialization
 	void Start ()
     {
-        m_dialogtree.MoveDown(1);
+        m_dialogtree.MoveDown(3);
         m_dialogtree.Current.DelegatePointer.Function.AddListener(this.EnableTypingCam);
 
         defaultPos = textObject.transform.position;
@@ -44,6 +44,8 @@ public class Typing : InteractableObject {
                     enableTyping = false;
                     CameraManager.GetInstance().mainCamera.gameObject.SetActive(true);
                     CameraManager.GetInstance().computerCamera.gameObject.SetActive(false);
+                    text.fontSize = 1.0f;
+                    textObject.transform.localScale = new Vector3(1, 1, 1);
 
                     textObject.transform.position = defaultPos;
                     textObject.transform.rotation = defaultRotation;
@@ -84,7 +86,7 @@ public class Typing : InteractableObject {
         CameraManager.GetInstance().mainCamera.gameObject.SetActive(false);
         textObject.transform.position = CameraManager.GetInstance().computerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f,10.0f));
         textObject.transform.rotation = Quaternion.identity;
-        textObject.transform.localScale = new Vector3(1, 1, 1);
+        textObject.transform.localScale = new Vector3(10, 10, 10);
 
         enableTyping = true;
     }
