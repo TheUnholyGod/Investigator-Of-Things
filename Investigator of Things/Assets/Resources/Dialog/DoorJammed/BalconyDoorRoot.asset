@@ -14,5 +14,8 @@ MonoBehaviour:
   m_dialogdata: The doors seems unjammed now
   m_delegatePointer: {fileID: 0}
   m_allchildren:
-  - {fileID: 11400000, guid: 739bbb7a30c91b04c8694e7f47c041be, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: 5a48262a192db224abadbaa52b3959a3, type: 2}
+  - {fileID: 11400000, guid: 5a48262a192db224abadbaa52b3959a3, type: 2}
+  - {fileID: 11400000, guid: 5a48262a192db224abadbaa52b3959a3, type: 2}
   - {fileID: 11400000, guid: 5a48262a192db224abadbaa52b3959a3, type: 2}

@@ -13,4 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogdata: This is a bookshelf
   m_delegatePointer: {fileID: 0}
-  m_allchildren: []
+  m_allchildren:
+  - {fileID: 11400000, guid: 4fa3ff5ce32a91249b8f7be29e48fe7f, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
+  - {fileID: 11400000, guid: c4c374e9fd0a0d14f809419bd898eec8, type: 2}
