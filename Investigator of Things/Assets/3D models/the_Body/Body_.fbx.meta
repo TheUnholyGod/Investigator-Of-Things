@@ -131,7 +131,12 @@ ModelImporter:
     7400006: Armature|walk.001
     9500000: //RootNode
     13700000: Icosphere
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: diffuse.000
+    second: {fileID: 2100000, guid: 7ac8afc5c7b73ef4bbfb5a2c3e21451b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
