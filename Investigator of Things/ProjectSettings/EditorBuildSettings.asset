@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene 2.unity
     guid: ad37a6bcd28493e4abf9e7c034a3f84f
+  - enabled: 1
+    path: Assets/murderscene.unity
+    guid: 4f2fe82ad38d2dd449a795e57e71b5eb
+  - enabled: 1
+    path: Assets/endscene.unity
+    guid: 8bbf01561e9bb9a48883669cb2fc964b
   m_configObjects: {}
