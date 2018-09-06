@@ -27,6 +27,7 @@ public class MineArea : InteractableGameObject {
         base.Interact();
         if (Input.GetKey(KeyCode.E))
         {
+            AudioManager.GetInstance().PlayAudio(gameObject.name);
             m_stateManager.Currstate = State.ACTIVATE;
         }
     }

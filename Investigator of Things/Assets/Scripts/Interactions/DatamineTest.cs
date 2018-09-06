@@ -6,6 +6,7 @@ public class DatamineTest : InteractableObject {
 
 	// Use this for initialization
 	void Start () {
+        m_dialogtree = Resources.Load<DialogTree>("Dialog/Droomba/DroombaImmobilizedTree");
         m_dialogtree.MoveDown(4);
         m_dialogtree.MoveDown(1);
         m_dialogtree.Current.DelegatePointer = DelegatePointer.CreateInstance<DelegatePointer>();
@@ -24,4 +25,9 @@ public class DatamineTest : InteractableObject {
 	void Update () {
 		
 	}
+
+    public void Copy(InteractableObject obj)
+    {
+        DialogManager = obj.GetDialogManager();
+    }
 }

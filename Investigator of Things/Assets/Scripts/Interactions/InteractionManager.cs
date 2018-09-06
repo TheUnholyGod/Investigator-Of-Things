@@ -86,7 +86,10 @@ public class InteractionManager : Singleton<InteractionManager> {
         {
             InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
 
-            raycasted.GetComponent<DroombaAI>().isImmobilized = true;
+            InteractableObject obj = raycasted.GetComponent<InteractableObject>();
+            DatamineTest test = raycasted.AddComponent<DatamineTest>();
+            test.Copy(obj);
+            Destroy(obj);
             AudioManager.GetInstance().PlayAudio(raycasted.name);
             AudioManager.GetInstance().PlayAudio(raycasted.GetComponent<DroombaAI>().cleaningWaypoint.name);
         });
@@ -126,17 +129,20 @@ public class InteractionManager : Singleton<InteractionManager> {
         {
             if (raycasted.GetComponent<InteractableObject>() != null)
             {
-                DialogManager.DialogTree = raycasted.GetComponent<InteractableObject>().Dialogtree;
-                raycasted.GetComponent<InteractableObject>().Dialogtree.MoveDown((int)(interaction));
-                if (raycasted.GetComponent<InteractableObject>().Dialogtree.Current.DelegatePointer != null)
+                if (DialogManager.hasDialog != true)
                 {
-                    if (interaction == Interactions.Pickup || interaction == Interactions.Inspect)
+                    DialogManager.DialogTree = raycasted.GetComponent<InteractableObject>().Dialogtree;
+                    raycasted.GetComponent<InteractableObject>().Dialogtree.MoveDown((int)(interaction));
+                    if (raycasted.GetComponent<InteractableObject>().Dialogtree.Current.DelegatePointer != null)
                     {
-                        player.Inspect();
-                    }
+                        if (interaction == Interactions.Pickup || interaction == Interactions.Inspect)
+                        {
+                            player.Inspect();
+                        }
 
+                    }
+                    DialogManager.TriggerDialog(new int[] { (int)(interaction) });
                 }
-                DialogManager.TriggerDialog(new int[] { (int)(interaction) });
             }
 
         }

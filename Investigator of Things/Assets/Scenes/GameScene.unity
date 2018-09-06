@@ -15770,7 +15770,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Center: {x: 0, y: 0.89, z: 0}
 --- !u!114 &1005679140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17578,13 +17578,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117469274}
-  m_LocalRotation: {x: 0.09581628, y: 0.89445186, z: -0.23132098, w: 0.37049407}
-  m_LocalPosition: {x: 9.8, y: 8.37, z: 40.6}
+  m_LocalRotation: {x: 0.011368111, y: 0.9648204, z: -0.19974212, w: 0.1705741}
+  m_LocalPosition: {x: 11.89, y: 8.37, z: 42.69}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 1959732945}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 29, y: 135, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.911001, y: 159.365, z: -2.8750002}
 --- !u!81 &1117469276
 AudioListener:
   m_ObjectHideFlags: 0
@@ -23886,6 +23886,7 @@ MonoBehaviour:
   dragged: {fileID: 0}
   custom_Cursor: {fileID: 1007176526}
   textbox: {fileID: 1987229827}
+  player: {fileID: 0}
 --- !u!224 &1491919133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25752,34 +25753,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1584191940}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1595016590
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1595016591}
-  m_Layer: 0
-  m_Name: Waterpuddle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1595016591
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1595016590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1615466665
 GameObject:
   m_ObjectHideFlags: 0
@@ -33459,13 +33432,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116529482}
-  m_LocalRotation: {x: 0.15999691, y: -0, z: -0, w: 0.9871175}
+  m_LocalRotation: {x: 0.19868341, y: -0, z: -0, w: 0.9800638}
   m_LocalPosition: {x: -18.48, y: 9.5, z: -12.055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1959732945}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 18.413, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.920002, y: 0, z: 0}
 --- !u!81 &2116529484
 AudioListener:
   m_ObjectHideFlags: 0

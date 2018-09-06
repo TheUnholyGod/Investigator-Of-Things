@@ -34,4 +34,9 @@ public class InteractableObject : MonoBehaviour {
         //DialogManager.DialogTree = m_dialogtree;
         //DialogManager.TriggerDialog();
     }
+
+    public DialogManager GetDialogManager()
+    {
+        return DialogManager;
+    }
 }

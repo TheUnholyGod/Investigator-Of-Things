@@ -22,7 +22,7 @@ public class Typing : InteractableObject {
     bool enableTyping = false;
     public bool canType = true;
 
-    string wrongMessage = "Wrong Password";
+    string wrongMessage = "Wrong Password\nHint: Wealth is the \nbalance of life";
 
 	// Use this for initialization
 	void Start ()

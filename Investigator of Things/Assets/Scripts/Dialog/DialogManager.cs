@@ -13,7 +13,7 @@ public class DialogManager : MonoBehaviour {
     [SerializeField]
     TMPro.TextMeshProUGUI m_textbox;
 
-    bool hasDialog = false;
+    public bool hasDialog = false;
 
     float m_dialogspeed = 0.025f;
 
@@ -105,6 +105,7 @@ public class DialogManager : MonoBehaviour {
                     break;
                 yield return 0;
             }
+                yield return 0;
         }
         hasDialog = false;
     }
