@@ -13,8 +13,8 @@ public class DatamineTest : InteractableObject {
         m_dialogtree.Current.DelegatePointer.Function.AddListener(() => 
         {
             UnityEngine.SceneManagement.Scene topdown = UnityEngine.SceneManagement.SceneManager.GetSceneByName("TopDownShooter");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TopDownShooter", UnityEngine.SceneManagement.LoadSceneMode.Additive);
-            UnityEngine.SceneManagement.SceneManager.SetActiveScene(topdown);
+            GetComponent<ChangeToTopDown>().Trigger();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TopDownShooter");
             //foreach()
         }
         );

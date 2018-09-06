@@ -7,6 +7,7 @@ public class MineArea : InteractableGameObject {
     [SerializeField]
     float cooldownreset = 10.0f;
     float cooldowntimer = 0.0f;
+    public bool complete = false;
 
     public override void Idle()
     {
@@ -36,7 +37,8 @@ public class MineArea : InteractableGameObject {
         cooldowntimer += Time.deltaTime;
         if (cooldownreset < cooldowntimer)
         {
-            Debug.Log("WIN");
+            complete = true;
+            //Debug.Log("WIN");
         }
     }
 

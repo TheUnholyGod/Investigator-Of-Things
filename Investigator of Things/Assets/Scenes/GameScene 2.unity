@@ -6800,6 +6800,40 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300374, guid: ad496fb653ea8244bbe91fd14fac4fae, type: 3}
+--- !u!1 &405007410 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1484698043363204, guid: cc1de099bb0d0e84e9bbce3d99deb83d,
+    type: 2}
+  m_PrefabInternal: {fileID: 637217879}
+--- !u!114 &405007412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405007410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db4862d194bd124abdc0112d27405b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogtree: {fileID: 11400000, guid: 2160a8baf41f49440a238f11aa6572af, type: 2}
+  DialogManager: {fileID: 1897543003}
+--- !u!114 &405007413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405007410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a003f6c40be938419e24b14047c1487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_toggles:
+  - {fileID: 1959732944}
+  - {fileID: 1005679135}
+  - {fileID: 653048309}
+  - {fileID: 1491919131}
 --- !u!1 &410318362
 GameObject:
   m_ObjectHideFlags: 0
@@ -7528,6 +7562,34 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300418, guid: ad496fb653ea8244bbe91fd14fac4fae, type: 3}
+--- !u!1 &470560477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 470560479}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470560479
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 470560477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27454.041, y: -43.29521, z: 15829.886}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491086451
 GameObject:
   m_ObjectHideFlags: 0
@@ -9537,7 +9599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4498fcb08bfb1e749ab111645455da03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destroyOnLoad: 0
+  m_destroyOnLoad: 1
 --- !u!4 &653048311
 Transform:
   m_ObjectHideFlags: 0
@@ -9562,7 +9624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47fab63aa6f64a4ab7431d6a50092ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destroyOnLoad: 0
+  m_destroyOnLoad: 1
   inventoryTab: {fileID: 1000946238}
 --- !u!114 &653048313
 MonoBehaviour:
@@ -9575,7 +9637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a906938d1be64324f9f77eb62e79c5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destroyOnLoad: 0
+  m_destroyOnLoad: 1
   inventoryTab: {fileID: 493083395}
 --- !u!1 &657714944
 GameObject:
@@ -12947,7 +13009,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 703e37ae0b2b0fe459cba88420a67a89, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 703e37ae0b2b0fe459cba88420a67a89, type: 3}
       propertyPath: m_LocalScale.x
@@ -14347,7 +14409,7 @@ Prefab:
     - target: {fileID: 224259629746137966, guid: 5cdb0753764c55540ba3ae96934f47b8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 14.759064
+      value: 14.759033
       objectReference: {fileID: 0}
     - target: {fileID: 114434412418555336, guid: 5cdb0753764c55540ba3ae96934f47b8,
         type: 2}
@@ -15066,7 +15128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7b489abc0ff946bec8d90b46e0aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destroyOnLoad: 0
+  m_destroyOnLoad: 1
   speed: 1
 --- !u!114 &1005679141
 MonoBehaviour:
@@ -21055,7 +21117,7 @@ Transform:
   - {fileID: 1711017831}
   - {fileID: 1171865300}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1427381432
 MonoBehaviour:
@@ -29850,7 +29912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a450c682cc206e64e8381c06d04854fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_destroyOnLoad: 0
+  m_destroyOnLoad: 1
   mainCamera: {fileID: 0}
   computerCamera: {fileID: 0}
   cameraTransition: 0
