@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 224963839447711518}
   - component: {fileID: 222482572544226006}
   - component: {fileID: 114011561581057882}
+  - component: {fileID: 114960084185592222}
   m_Layer: 5
   m_Name: Text_Clock(Time)
   m_TagString: Untagged
@@ -1010,7 +1011,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 00:00
+  m_Text: 00:00:00
 --- !u!114 &114050340894741712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1398,7 +1399,7 @@ MonoBehaviour:
         m_MethodName: SetCursorTexture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: ebb9f6932283943409752828c4f613ee,
+          m_ObjectArgument: {fileID: 2800000, guid: 521055c343a59064db523ed9ae7d1662,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
@@ -1489,7 +1490,7 @@ MonoBehaviour:
         m_MethodName: SetCursorTexture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: 856434a3fa75f2b4b896b7ab6c2a1f71,
+          m_ObjectArgument: {fileID: 2800000, guid: 521055c343a59064db523ed9ae7d1662,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
@@ -1638,7 +1639,7 @@ MonoBehaviour:
         m_MethodName: SetCursorTexture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: 2caad7d4811563d4c9e3280305500907,
+          m_ObjectArgument: {fileID: 2800000, guid: 521055c343a59064db523ed9ae7d1662,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
@@ -1702,7 +1703,7 @@ MonoBehaviour:
         m_MethodName: SetCursorTexture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: 68d3c11848536954187ec23864df7ea4,
+          m_ObjectArgument: {fileID: 2800000, guid: 521055c343a59064db523ed9ae7d1662,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
@@ -2020,7 +2021,7 @@ MonoBehaviour:
         m_MethodName: SetCursorTexture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2800000, guid: b2ccdd6d82ff80242a462e040050d7d7,
+          m_ObjectArgument: {fileID: 2800000, guid: 521055c343a59064db523ed9ae7d1662,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine
           m_IntArgument: 0
@@ -2096,7 +2097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.047058824}
+  m_Color: {r: 0.8537636, g: 0, b: 1, a: 0.2509804}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2995,7 +2996,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Security System // 2056
+  m_Text: Security System // 2033
 --- !u!114 &114949794560458534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3041,6 +3042,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114960084185592222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266706279539014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad78aad897ac1fe42a5147146d206a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hours: 12
+  minutes: 16
+  timeMultiplier: 1
 --- !u!114 &114972749000774938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3470,7 +3485,7 @@ RectTransform:
   - {fileID: 224944788901303322}
   - {fileID: 224177942029325474}
   m_Father: {fileID: 224490572918549310}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.040000003}
   m_AnchorMin: {x: 0, y: 0.94500005}
   m_AnchorMax: {x: 1, y: 1}
@@ -3560,7 +3575,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224490572918549310}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.94500005}
@@ -3750,7 +3765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.4565621, y: 0}
-  m_AnchoredPosition: {x: 14.759277, y: 134.88}
+  m_AnchoredPosition: {x: 14.759369, y: 134.88}
   m_SizeDelta: {x: -29.670044, y: 210.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224266089313266476
@@ -3788,7 +3803,7 @@ RectTransform:
   - {fileID: 224164987942840506}
   - {fileID: 224087369686597908}
   m_Father: {fileID: 224490572918549310}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4565621, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3969,11 +3984,11 @@ RectTransform:
   - {fileID: 224299692041578050}
   - {fileID: 224259629746137966}
   - {fileID: 224548723524484696}
-  - {fileID: 224273893498353426}
   - {fileID: 224765458554404630}
   - {fileID: 224900271686462864}
   - {fileID: 224025906161753436}
   - {fileID: 224135464721156870}
+  - {fileID: 224273893498353426}
   - {fileID: 224301413768925044}
   - {fileID: 224189560687149710}
   - {fileID: 4695113582736514}
@@ -4236,7 +4251,7 @@ RectTransform:
   m_LocalScale: {x: 0.1550727, y: 0.1550727, z: 0.15507269}
   m_Children: []
   m_Father: {fileID: 224490572918549310}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4349,8 +4364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 195.15, y: 75.241}
-  m_SizeDelta: {x: -449.98, y: -329.88}
+  m_AnchoredPosition: {x: 194.65002, y: 75.241}
+  m_SizeDelta: {x: -450.98, y: -329.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224900271686462864
 RectTransform:
@@ -4363,7 +4378,7 @@ RectTransform:
   m_LocalScale: {x: 0.1550727, y: 0.1550727, z: 0.15507269}
   m_Children: []
   m_Father: {fileID: 224490572918549310}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4565621, y: 0}
   m_AnchorMax: {x: 0.4565621, y: 0}
@@ -4385,7 +4400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.13424319}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.362503, y: -6.9000244}
+  m_AnchoredPosition: {x: 5.362503, y: -6.8999634}
   m_SizeDelta: {x: -10.225, y: -12.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224911490757672082
