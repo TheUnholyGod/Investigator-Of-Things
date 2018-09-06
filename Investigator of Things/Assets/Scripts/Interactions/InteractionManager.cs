@@ -30,6 +30,9 @@ public class InteractionManager : Singleton<InteractionManager> {
     [SerializeField]
     TMPro.TextMeshProUGUI textbox;
 
+    [SerializeField]
+    Player player;
+
     string text = "", prevtext = "";
 
     Dictionary<string, UnityEvent> eventslib = new Dictionary<string, UnityEvent>();
@@ -106,6 +109,15 @@ public class InteractionManager : Singleton<InteractionManager> {
             if (raycasted.GetComponent<InteractableObject>() != null)
             {
                 DialogManager.DialogTree = raycasted.GetComponent<InteractableObject>().Dialogtree;
+                raycasted.GetComponent<InteractableObject>().Dialogtree.MoveDown((int)(interaction));
+                if (raycasted.GetComponent<InteractableObject>().Dialogtree.Current.DelegatePointer != null)
+                {
+                    if (interaction == Interactions.Pickup || interaction == Interactions.Inspect)
+                    {
+                        player.Inspect();
+                    }
+                    
+                }
                 DialogManager.TriggerDialog(new int[] { (int)(interaction) });
             }
 

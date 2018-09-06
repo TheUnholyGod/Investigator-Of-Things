@@ -64,6 +64,7 @@
     <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\Endmanager.cs" />
     <Compile Include="Assets\LoadEndScene.cs" />
+    <Compile Include="Assets\RemoveInspect.cs" />
     <Compile Include="Assets\SceneChange.cs" />
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />

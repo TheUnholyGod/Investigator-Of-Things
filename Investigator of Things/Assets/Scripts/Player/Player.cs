@@ -9,6 +9,12 @@ public class Player : Singleton<Player> {
     CharacterController character;
     public float speed = 1.0f;
 
+    [SerializeField]
+    Animator animator;
+
+    [SerializeField]
+    InteractionManager interactionManager;
+
 	// Use this for initialization
 	void Start () {
         character = GetComponent<CharacterController>();
@@ -23,14 +29,20 @@ public class Player : Singleton<Player> {
         Vector3 moveDirection = (target - transform.position);
 
 
-        if (moveDirection.magnitude > 1)
+        if (moveDirection.magnitude > 1 && interactionManager.Interaction == InteractionManager.Interactions.None)
         {
+            transform.LookAt(target);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
             moveDirection.Normalize();
             //moveDirection = transform.TransformDirection(moveDirection.normalized);
             moveDirection *= speed;
             prevPos = transform.position;
             character.Move(moveDirection);
+            animator.SetBool("iswalking", true);
+            if (character.velocity.magnitude < 1)
+                animator.SetBool("iswalking", false);
         }
+        
 
         CameraManager.GetInstance().CheckIfInView(gameObject);
     }
@@ -39,5 +51,15 @@ public class Player : Singleton<Player> {
     {
         this.target = target;
         this.target.y = 0;
+    }
+
+    public void Inspect()
+    {
+        animator.SetBool("inspect", true);
+    }
+
+    public void Take()
+    {
+        animator.SetBool("take", true);
     }
 }
