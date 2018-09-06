@@ -80,7 +80,8 @@ public class InteractionManager : Singleton<InteractionManager> {
             InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
 
             raycasted.GetComponent<DroombaAI>().isImmobilized = true;
-        })
+        });
+        eventslib.Add("Stab", e);
 	}
 
     // Update is called once per frame
@@ -124,11 +125,13 @@ public class InteractionManager : Singleton<InteractionManager> {
         else
         {
             if (raycasted != null)
-            {
+            { 
                 if (dragged != null && dragged.name.Contains("Glass") && raycasted.name.Contains("Faucet"))
                     eventslib["Fill"].Invoke();
-                else if (dragged != null && dragged.name.Contains("full") && raycasted.name.Contains("table"))
+                else if (dragged != null && dragged.name.Contains("full") && raycasted.name.Contains("Table"))
                     eventslib["Spill"].Invoke();
+                else if (dragged != null && dragged.name.Contains("knife") && raycasted.name.Contains("Droomba"))
+                    eventslib["Stab"].Invoke();
                 else
                     eventslib["Cube"].Invoke();
             }

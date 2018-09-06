@@ -54,7 +54,21 @@ public class InventoryManager : Singleton<InventoryManager>
             //list.Add(newItem);
 
             GameObject obj = Instantiate(Resources.Load<GameObject>("Items/UIItem"));
-            obj.transform.SetParent(inventoryTab.transform.GetChild(inventory.Count));
+
+            bool childSet = false;
+            if (inventory.Count > 0)
+            {
+                for (int i = 0; i < inventory.Count; ++i)
+                {
+                    if (inventoryTab.transform.GetChild(i).childCount == 0)
+                    {
+                        obj.transform.SetParent(inventoryTab.transform.GetChild(i));
+                        childSet = true;
+                    }
+                }
+            }
+            if (!childSet)
+                obj.transform.SetParent(inventoryTab.transform.GetChild(inventory.Count));
 
             obj.transform.localScale = new Vector3(1, 1, 1);
             obj.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
