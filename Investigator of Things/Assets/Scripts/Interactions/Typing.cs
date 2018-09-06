@@ -20,6 +20,7 @@ public class Typing : InteractableObject {
     Quaternion defaultRotation;
 
     bool enableTyping = false;
+    public bool canType = true;
 
 	// Use this for initialization
 	void Start ()
@@ -52,9 +53,16 @@ public class Typing : InteractableObject {
                     textObject.transform.localScale = defaultScale;
                     return;
                 }
+                else if (!canType)
+                    return;
                 else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
                 {
-                    Debug.Log(password.Equals(text.text));
+                    m_dialogtree = Resources.Load<DialogTree>("Dialog/Computer/ComputerAfterPowerTree");
+
+                    text.text = "Welcome back Daniel";
+
+                    m_dialogtree.MoveToRoot();
+                    canType = false;
                 }
 
                 foreach (char characters in Input.inputString)

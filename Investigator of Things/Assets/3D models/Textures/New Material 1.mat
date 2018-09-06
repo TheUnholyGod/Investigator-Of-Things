@@ -55,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 126cc06058a7f134aa7e4ae637fe764c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8407d4c28ad473e4cb7f6b84fa9f54f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
