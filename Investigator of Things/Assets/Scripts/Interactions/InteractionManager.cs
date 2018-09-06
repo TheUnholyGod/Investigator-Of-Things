@@ -60,6 +60,8 @@ public class InteractionManager : Singleton<InteractionManager> {
             InventoryManager.GetInstance().RemoveItem(item);
             item.itemName = "item_drinkingGlass-full";
             InventoryManager.GetInstance().AddItem(item);
+
+            AudioManager.GetInstance().PlayAudio(raycasted.name);
             });
         eventslib.Add("Fill", e);
 
@@ -68,6 +70,8 @@ public class InteractionManager : Singleton<InteractionManager> {
         {
             InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
             raycasted.transform.GetChild(0).gameObject.SetActive(true);
+
+            AudioManager.GetInstance().PlayAudio(raycasted.name);
 
             GameObject obj = GameObject.Find("Droomba");
             obj.GetComponent<DroombaAI>().cleaningWaypoint.SetActive(true);
@@ -80,6 +84,8 @@ public class InteractionManager : Singleton<InteractionManager> {
             InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
 
             raycasted.GetComponent<DroombaAI>().isImmobilized = true;
+            AudioManager.GetInstance().PlayAudio(raycasted.name);
+            AudioManager.GetInstance().PlayAudio(raycasted.GetComponent<DroombaAI>().cleaningWaypoint.name);
         });
         eventslib.Add("Stab", e);
 	}

@@ -64,6 +64,7 @@ public class Typing : InteractableObject {
                 {
                     if (password.Equals(text.text))
                     {
+                        AudioManager.GetInstance().PlayAudio(gameObject.name);
                         m_dialogtree = Resources.Load<DialogTree>("Dialog/Computer/ComputerAfterPowerTree");
 
                         text.text = "Welcome back Daniel";
@@ -80,6 +81,7 @@ public class Typing : InteractableObject {
                     }
                     else
                     {
+                        AudioManager.GetInstance().PlayAudio(text.gameObject.name);
                         text.text = wrongMessage;
                     }
                 }
