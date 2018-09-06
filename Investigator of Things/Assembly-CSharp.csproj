@@ -66,6 +66,7 @@
     <Compile Include="Assets\Endmanager.cs" />
     <Compile Include="Assets\LoadEndScene.cs" />
     <Compile Include="Assets\RemoveInspect.cs" />
+    <Compile Include="Assets\Resources\Sounds\StateManager\StateManager.cs" />
     <Compile Include="Assets\SceneChange.cs" />
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Assets\Scripts\BackEnd\GameManager.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Singleton\SingletonInterface.cs" />
-    <Compile Include="Assets\Scripts\BackEnd\StateManager\StateManager.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Tree\INode.cs" />
     <Compile Include="Assets\Scripts\BackEnd\Tree\ITree.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraEffects.cs" />
