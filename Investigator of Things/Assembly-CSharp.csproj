@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\Scripts\AI\BomberAI.cs" />
     <Compile Include="Assets\Scripts\AI\Damage.cs" />
+    <Compile Include="Assets\Scripts\AI\DroombaAI.cs" />
     <Compile Include="Assets\Scripts\AI\Explosion.cs" />
     <Compile Include="Assets\Scripts\AI\InteractableGameObject.cs" />
     <Compile Include="Assets\Scripts\AI\MeleeAI.cs" />

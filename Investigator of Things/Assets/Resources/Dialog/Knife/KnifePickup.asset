@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogdata: "\u201CStrange\u2026 No fingerprints, our killer knows at least something
     about what he is doing\u201D"
-  m_delegatePointer: {fileID: 0}
+  m_delegatePointer: {fileID: 11400000, guid: 15008a669d5e92a4aac8003efeeec753, type: 2}
   m_allchildren:
   - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}

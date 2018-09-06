@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: ComputerAfterPowerCallDROOMBA
   m_EditorClassIdentifier: 
   m_dialogdata: Calling DROOMBA
-  m_delegatePointer: {fileID: 0}
+  m_delegatePointer: {fileID: 11400000, guid: 4e80d3075541ea14992002657a9110f2, type: 2}
   m_allchildren:
   - {fileID: 11400000, guid: 6ba553e59aed07b4f894a2993248be54, type: 2}
