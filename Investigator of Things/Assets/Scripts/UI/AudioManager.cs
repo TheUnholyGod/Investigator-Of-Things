@@ -10,6 +10,7 @@ public class AudioManager : Singleton<AudioManager> {
 	void Start () {
 
         sources = new Dictionary<string, AudioSource>();
+        this.m_destroyOnLoad = true;
 
         AudioSource[] source = FindObjectsOfType<AudioSource>() as AudioSource[];
 
@@ -45,6 +46,19 @@ public class AudioManager : Singleton<AudioManager> {
             sources[name].Stop();
         else
             Debug.Log(name + " doesn't exist/is playing");
+    }
+
+    public void Reset()
+    {
+        foreach(string audio in sources.Keys)
+            sources[audio].Stop();
+
+        sources = new Dictionary<string, AudioSource>();
+
+        AudioSource[] source = FindObjectsOfType<AudioSource>() as AudioSource[];
+
+        foreach (AudioSource audio in source)
+            sources.Add(audio.gameObject.name, audio);
     }
 
 }
