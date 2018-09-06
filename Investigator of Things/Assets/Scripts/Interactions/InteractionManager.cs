@@ -83,7 +83,7 @@ public class InteractionManager : Singleton<InteractionManager> {
             InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
 
             raycasted.GetComponent<DroombaAI>().isImmobilized = true;
-        })
+        });
 	}
 
     // Update is called once per frame
