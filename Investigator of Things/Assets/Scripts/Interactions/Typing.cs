@@ -22,6 +22,8 @@ public class Typing : InteractableObject {
     bool enableTyping = false;
     public bool canType = true;
 
+    string wrongMessage = "Wrong Password";
+
 	// Use this for initialization
 	void Start ()
     {
@@ -40,6 +42,9 @@ public class Typing : InteractableObject {
         {
             if (Input.anyKeyDown)
             {
+                if (wrongMessage.Equals(text.text))
+                    text.text = "";
+
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     enableTyping = false;
@@ -57,12 +62,26 @@ public class Typing : InteractableObject {
                     return;
                 else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
                 {
-                    m_dialogtree = Resources.Load<DialogTree>("Dialog/Computer/ComputerAfterPowerTree");
+                    if (password.Equals(text.text))
+                    {
+                        m_dialogtree = Resources.Load<DialogTree>("Dialog/Computer/ComputerAfterPowerTree");
 
-                    text.text = "Welcome back Daniel";
+                        text.text = "Welcome back Daniel";
 
-                    m_dialogtree.MoveToRoot();
-                    canType = false;
+                        m_dialogtree.MoveToRoot();
+                        m_dialogtree.MoveDown(4);
+                        m_dialogtree.Current.DelegatePointer.Function.AddListener(() =>
+                        {
+                            GameObject droomba = GameObject.Find("Droomba");
+                            if (!droomba.GetComponent<DroombaAI>().isCleaning)
+                                droomba.GetComponent<DroombaAI>().enabled = true;
+                        });
+                        canType = false;
+                    }
+                    else
+                    {
+                        text.text = wrongMessage;
+                    }
                 }
 
                 foreach (char characters in Input.inputString)

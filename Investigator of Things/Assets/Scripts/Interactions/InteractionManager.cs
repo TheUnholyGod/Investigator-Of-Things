@@ -71,8 +71,19 @@ public class InteractionManager : Singleton<InteractionManager> {
         {
             InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
             raycasted.transform.GetChild(0).gameObject.SetActive(true);
+
+            GameObject obj = GameObject.Find("Droomba");
+            obj.GetComponent<DroombaAI>().cleaningWaypoint.SetActive(true);
         });
         eventslib.Add("Spill", e);
+
+        e = new UnityEvent();
+        e.AddListener(() =>
+        {
+            InventoryManager.GetInstance().RemoveItem(dragged.GetComponent<InventoryItem>());
+
+            raycasted.GetComponent<DroombaAI>().isImmobilized = true;
+        })
 	}
 
     // Update is called once per frame

@@ -1,21 +1,35 @@
 fileFormatVersion: 2
-guid: f872d2760ca024c4c8bcd17753dfec57
+guid: 4c78ebc7936d1e64ebe86196ecdc747b
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Neon_lights_Long
+    100004: Neon_lights_Lshape
+    100006: Neon_lights_rings
+    100008: Neon_lights_short
     400000: //RootNode
-    2100000: Material.001
-    2100002: Material.002
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Plane
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: ef96c48ea6a96ae49a4159f07cdb67fc, type: 2}
+    400002: Neon_lights_Long
+    400004: Neon_lights_Lshape
+    400006: Neon_lights_rings
+    400008: Neon_lights_short
+    2100000: Neon_lights_LongMat
+    2100002: Neon_lights_LshapeMat
+    2100004: Neon_lights_ringsMat
+    2100006: Neon_lights_shortMat
+    2300000: Neon_lights_Long
+    2300002: Neon_lights_Lshape
+    2300004: Neon_lights_rings
+    2300006: Neon_lights_short
+    3300000: Neon_lights_Long
+    3300002: Neon_lights_Lshape
+    3300004: Neon_lights_rings
+    3300006: Neon_lights_short
+    4300000: Neon_lights_Long
+    4300002: Neon_lights_Lshape
+    4300004: Neon_lights_rings
+    4300006: Neon_lights_short
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -46,7 +60,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 4
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
